@@ -1,0 +1,1 @@
+export {getInitialChar} from "./typographie/text"
