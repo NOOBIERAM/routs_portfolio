@@ -1,8 +1,10 @@
-@layer theme, base, components, utilities;
+@layer theme,base, components, utilities;
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 /* #10B981 */
+
+
 @theme {
     --color-eni-green: oklch(82.714% 0.17184 147.63);
     --color-eni-green-50: oklch(100% 0 none);
@@ -16,4 +18,18 @@
     --color-eni-green-800: oklch(78.473% 0.21362 145.98);
     --color-eni-green-900: oklch(70.056% 0.20791 145.14);
     --color-eni-green-950: oklch(63.694% 0.18813 145.15);
+}
+:root {
+  --background: oklch(24.072% 0.03408 222.085);
+  
+}
+
+@layer base {
+  body {
+    @apply bg-gray-800 text-white;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
