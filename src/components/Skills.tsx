@@ -1,6 +1,5 @@
-import { Github, ChevronRight, TerminalSquareIcon, Linkedin, Facebook, File, CornerDownLeftIcon, Mail, Phone, MapPin, Code2, Database, Server, Zap } from "lucide-react";
-import React, { useEffect, useState } from "react";
-import { stack } from "../data";
+import { Code2, Database, Server, Zap } from "lucide-react";
+import React from "react";
 
 const skillCategories = [
     {

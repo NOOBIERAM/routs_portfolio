@@ -1,15 +1,14 @@
-import { Github, ChevronRight, TerminalSquareIcon, Linkedin, Facebook, File, CornerDownLeftIcon, Mail, Phone, MapPin, SquareArrowLeft, SquareArrowRight, CircleChevronRight, CircleChevronLeft } from "lucide-react";
-import React, { useEffect, useState } from "react";
-import { stack } from "../data";
+import { Github, ChevronRight, TerminalSquareIcon, Linkedin, Facebook,  CornerDownLeftIcon, Mail, Phone, MapPin,  CircleChevronRight, CircleChevronLeft } from "lucide-react";
+import React from "react";
 
 
 const Hero: React.FC = () => {
-    const stacks = stack
-    const [displayText, setDisplayText] = useState('')
-    const fullText = '$ whoami'
-    const responseText = 'Developer Web - Full Stack Engineer - Open Source Enthusiast'
+    //const stacks = stack
+    //const [displayText, setDisplayText] = useState('')
+    //const fullText = '$ whoami'
+    //const responseText = 'Developer Web - Full Stack Engineer - Open Source Enthusiast'
 
-    useEffect(() => {
+    /*useEffect(() => {
         let index = 0
         const interval = setInterval(() => {
             if (index <= fullText.length) {
@@ -20,7 +19,7 @@ const Hero: React.FC = () => {
             }
         }, 100)
         return () => clearInterval(interval)
-    }, [])
+    }, [])*/
 
     return (
         <section className="relative min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden flex ">
