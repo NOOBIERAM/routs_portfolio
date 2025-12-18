@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
                             👋 Hello, I'm <span className="font-bold">Rotsi.</span>
                         </h2>
                         <p className="text-xl md:text-lg  text-white/90 mb-30 leading-relaxed font-normal drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]">
-                            A developer pasiionate about creating innovative, efficient and scalable digital solutions. I combine creativity and technical expertise to bring ideas to life in the digital world.
+                            A developer pasionate about creating innovative, efficient and scalable digital solutions. I combine creativity and technical expertise to bring ideas to life in the digital world.
                         </p>
                         <div className="flex justify-start animate-fade-in-up delay-400 -translate-y-12 space-x-4 ">
                             <a href="#skills" className="flex items-center border-2 rounded-2xl p-2 px-5 space-x-3 font-semibold">
