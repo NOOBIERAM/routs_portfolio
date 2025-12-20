@@ -33,12 +33,13 @@ const Hero: React.FC = () => {
                         <p className="text-xl md:text-lg  mb-30 leading-relaxed font-normal drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]">
                             A developer pasionate about creating innovative, efficient and scalable digital solutions. I combine creativity and technical expertise to bring ideas to life in the digital world.
                         </p>
+                        
                         <div className="flex justify-start animate-fade-in-up delay-400 -translate-y-12 space-x-4 ">
-                            <a href="#skills" className="flex items-center border-2 rounded-2xl p-2 px-5 space-x-3 font-semibold">
+                            <a href="#skills" className="flex items-center border-2 rounded-2xl p-2 px-5 space-x-3 font-semibold hover:text-teal-500 hover:shadow-lg shadow-white/10">
                                 <span>$ Skills</span> <CornerDownLeftIcon /></a>
-                            <a href="#" className="flex items-center border-2 rounded-2xl p-2 px-5 space-x-3 font-semibold">
+                            <a href="#" className="flex items-center border-2 rounded-2xl p-2 px-5 space-x-3 font-semibold hover:text-teal-500 hover:shadow-lg shadow-white/10">
                                 <span>$ Projects</span> <CornerDownLeftIcon /></a>
-                            <a href="#" className="flex items-center border-2 rounded-2xl p-2 px-5 space-x-3 font-semibold">
+                            <a href="#" className="flex items-center border-2 rounded-2xl p-2 px-5 space-x-3 font-semibold hover:text-teal-500 hover:shadow-lg shadow-white/10">
                                 <span>Enter</span> <CornerDownLeftIcon /></a>
                         </div>
                     </div>
@@ -83,36 +84,6 @@ const Hero: React.FC = () => {
                                 
 
                                 <span className="ms-6 text-[15px] flex items-center justify-center"># Fullstack Developer </span>
-                            </div>
-                            <div className="mb-6 border-r-3 border-gray-700">
-                                <span className="flex items-center mb-2 text-teal-500 text-sm"><ChevronRight size={18} /> $ cat ~/Contact & Network</span>
-                                <ul className="text-[15px] mt-4 space-y-1 ms-6 flex flex-col items-center justify-center">
-                                    <li>==============================================</li>
-                                    <li className="text-[15px] ms-6  flex items-center"><Mail size={15} className="me-3" /> rotsiniainaramanantsoa.gg@gmail.com </li>
-                                    <li className="text-[15px] ms-6  flex items-center"><Phone size={15} className="me-3" /> +261 34 77 006 26 </li>
-                                    <li className="text-[15px] ms-6  flex items-center"><MapPin size={15} className="me-3" /> Madagascar</li>
-                                    <li>==============================================</li>
-                                    {/* <li className="flex items-center space-x-3">
-                                        <span className="flex items-center"><CircleChevronLeft size={15} />----</span>
-                                        <a href="https://github.com/NOOBIERAM" target="_blank"
-                                            rel="noopener noreferrer" className="flex items-center hover:text-lg text-teal-500 hover:text-teal-700 border p-1 rounded bg-white"><Github size={18} /></a>
-                                        <span>----</span>
-                                        <a href="#" target="_blank"
-                                            rel="noopener noreferrer" className="flex items-center hover:text-lg text-teal-500 hover:text-teal-700 border p-1 rounded bg-white"><Linkedin size={18} /></a>
-                                        <span>----</span>
-                                        <a href="#" target="_blank"
-                                            rel="noopener noreferrer" className="flex items-center hover:text-lg text-teal-500 hover:text-teal-700 border p-1 rounded bg-white"><Facebook size={18} /></a>
-                                        <span className="flex items-center">----<CircleChevronRight size={15} /></span>
-
-                                    </li> */}
-                                    {/* <li><a href="#" target="_blank"
-                                        rel="noopener noreferrer" className="flex items-center hover:text-teal-600 hover:underline">----<Linkedin size={18} className="mx-3" /> Linkedin</a></li>
-                                    <li><a href="#" target="_blank"
-                                        rel="noopener noreferrer" className="flex items-center hover:text-teal-600 hover:underline">----<Facebook size={18} className="mx-3" /> Facebook</a></li>
-                                    <li><a href="https://docs.google.com/document/d/1StOsgVgqsSgMX2X_jq8Y1LkqSRjhDxzz6DWMUqXHhm0/edit?usp=sharing" target="_blank"
-                                        rel="noopener noreferrer" className="flex items-center hover:underline hover:text-teal-600">----<File size={18} className="mx-3" />CV</a></li> */}
-
-                                </ul>
                             </div>
                             <div className="mb-6 border-r-3 border-gray-700 text-sm">
                                 <span className="flex items-center mb-2"><ChevronRight size={18} /><span className="animate-pulse duration-75 font-extrabold">_</span></span>
