@@ -1,85 +1,91 @@
-import { Code2, Database, Server, Zap } from "lucide-react";
+import { Database, Zap, Code2, Cpu, Brackets, Dot, Smartphone } from "lucide-react";
 import React from "react";
 
-const skillCategories = [
+const skillsData = [
     {
         icon: Code2,
-        title: 'Frontend',
-        skills: ['React', 'Next', 'Tailwind CSS', 'Vue.js'],
+        title: 'Langages',
+        stacks: ['JavaScript', 'TypeScript', 'PHP', 'HTML', 'CSS', 'SQL'],
     },
     {
-        icon: Server,
-        title: 'Backend',
-        skills: ['Node.js', 'Express', 'FastAPI'],
+        icon: Brackets,
+        title: 'Framework & Bilbiothèques',
+        stacks: ['React', 'Next', 'Vue.js', 'Node.js', 'Express', 'NestJS', 'Tailwind CSS', "Bootstrap 5"],
     },
     {
+        icon: Smartphone,
+        title: 'Mobile',
+        stacks: ['ReactNative', 'Flutter'],
+    },
+     {
         icon: Database,
-        title: 'Base de Données',
-        skills: ['PostgreSQL', 'MySQL', 'MongoDB'],
+        title: 'Database',
+        stacks: ['PostgreSQL', 'MySQL', 'MongoDB'],
     },
     {
         icon: Zap,
-        title: 'Outils',
-        skills: ['Git', 'Docker'],
+        title: 'Tools',
+        stacks: ['Git', 'Github', 'Docker', 'Supabase','Jira'],
     },
+    {
+        icon: Cpu,
+        title: 'Os',
+        stacks: ['Ubuntu', 'Windows'],
+    }
 ];
-const programmingLanguages = ['JavaScript', 'TypeScript', 'Python', 'PHP'];
 
 const Skills: React.FC = () => {
-
-
     return (
-        <section id="skills" className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 text-white font-mono">
-            <div className="max-w-7xl mx-auto">
-                <div className="mb-5">
-                    <h1 className="text-3xl font-bold mb-4 flex items-center">$ ~/SKILLS <span className="animate-pulse ms-2">_</span> </h1>
-                    <p className=" text-white/90 ">Mes compétences techniques et expertise professionnelle.</p>
-                </div>
+        <section id="skills">
+            <h1 className="section-title">$ ~/SKILLS <span className="animate-pulse ms-2">_</span> </h1>
 
-                <div className="mb-12 flex flex-wrap gap-4">
-                    {programmingLanguages.map((language, index) => (
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:gap-10">
+                {skillsData.map((skills, index) => {
+                    const Icon = skills.icon;
+                    return (
                         <div
                             key={index}
-                            className="group p-4 py-2 border-2 border-teal-900/20 rounded-full hover:border-teal-400/60 transition-all duration-300 flex items-center justify-center shadow-2xl"
+                            className="group p-6 sm:w-100 sm:mx-auto border-teal-900/20 hover:border-teal-400/60 transition-all duration-300  shadow-0xl"
                         >
-                            <span className="text-sm text-teal-500">
-                                {language}
-                            </span>
-                        </div>
-                    ))}
-
-                </div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {skillCategories.map((category, index) => {
-                        const Icon = category.icon;
-                        return (
-                            <div
-                                key={index}
-                                className="group p-6 border-2 border-teal-900/20 rounded-xl hover:border-teal-400/60 transition-all duration-300  shadow-2xl"
-                            >
-                                <div className="flex items-center gap-3 mb-4">
-                                    <div className="p-3 rounded-lg bg-teal-500/20 group-hover:bg-teal-500/30 transition-colors">
-                                        <Icon size={24} className="text-teal-400" />
-                                    </div>
-                                    <h3 className="text-lg font-bold">{category.title}</h3>
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="p-3 rounded-lg bg-teal-500/20 group-hover:bg-teal-500/30 transition-colors">
+                                    <Icon size={24} className="text-teal-400" />
                                 </div>
-
-                                <ul className="space-y-2">
-                                    {category.skills.map((skill) => (
-                                        <li
-                                            key={skill}
-                                            className="text-sm text-gray-300 flex items-center gap-2 group-hover:text-teal-300 transition-colors"
-                                        >
-                                            <span className="w-1 h-1 rounded-full bg-teal-400" />
-                                            {skill}
-                                        </li>
-                                    ))}
-                                </ul>
+                                <h3 className="text-lg text-gray-200 font-bold">{skills.title}</h3>
                             </div>
-                        );
-                    })}
-                </div>
+
+                            <div className="flex flex-wrap xl:max-w-100  border-l-3 mx-auto ms-5">
+                                {skills.stacks.map((stack, index) => (
+                                    <div
+                                        key={index}
+                                        className={` py-2 text-teal-500  transition-all duration-300 flex items-center justify-center `}
+                                    >
+                                        <Dot className="text-teal-700" />
+                                        <span className="text-sm">
+                                            {stack}
+                                        </span>
+                                        <Dot className="text-teal-700" />
+
+
+                                    </div>
+                                ))}
+
+                            </div>
+                            {/* <ul className="space-y-2">
+                                {category.skills.map((skill) => (
+                                    <li
+                                        key={skill}
+                                        className="text-sm text-gray-300 flex items-center gap-2 group-hover:text-teal-300 transition-colors"
+                                    >
+                                        <span className="w-1 h-1 rounded-full bg-teal-400" />
+                                        {skill}
+                                    </li>
+                                ))}
+                            </ul> */}
+                        </div>
+                    );
+                })}
             </div>
 
         </section>
