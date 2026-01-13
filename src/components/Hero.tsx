@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
                             </li>
                             <li >
                                 <a
-                                    href="https://wa.me/2361347700626"
+                                    href="https://wa.me/261347700626"
                                     target="_blank" rel="noopener noreferrer"
                                     className="flex items-centert hover:text-teal-500">
                                     <img src={whatsapp} alt="WhatsApp" width={19} />
