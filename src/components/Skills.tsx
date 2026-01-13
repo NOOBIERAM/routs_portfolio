@@ -40,13 +40,13 @@ const Skills: React.FC = () => {
             <h1 className="section-title">$ ~/SKILLS <span className="animate-pulse ms-2">_</span> </h1>
 
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:gap-10">
+            <div className="grid md:grid-cols-2 sm:gap-10">
                 {skillsData.map((skills, index) => {
                     const Icon = skills.icon;
                     return (
                         <div
                             key={index}
-                            className="group p-6 sm:w-100 sm:mx-auto border-teal-900/20 hover:border-teal-400/60 transition-all duration-300  shadow-0xl"
+                            className="group p-6 sm:w-100 sm:mx-auto  transition-all duration-300  shadow-0xl"
                         >
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="p-3 rounded-lg bg-teal-500/20 group-hover:bg-teal-500/30 transition-colors">
