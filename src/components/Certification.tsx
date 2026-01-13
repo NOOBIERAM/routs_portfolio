@@ -1,7 +1,7 @@
 
 import React from "react";
 import Cert_7ED092929B39 from "../assets/images/Certificate/7ED092929B39.png"
-import { Expand, LinkIcon, Unlink } from "lucide-react";
+import { LinkIcon } from "lucide-react";
 
 const certificatesData = [
     {

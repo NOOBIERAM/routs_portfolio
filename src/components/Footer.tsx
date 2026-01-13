@@ -1,6 +1,5 @@
-import { Copyright, TerminalSquareIcon } from "lucide-react";
+import { Copyright } from "lucide-react";
 import React from "react";
-import AsciiLogo from "./AsciiLogo";
 
 
 const Footer: React.FC = () => {
