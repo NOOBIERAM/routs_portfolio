@@ -1,8 +1,9 @@
 import About from "./components/About"
+import Certification from "./components/Certification"
 import Hero from "./components/Hero"
 import ScrollTop from "./components/ScrollTop"
 import  Skills from "./components/Skills"
-import TerminalUI from "./components/TerminalUI"
+import TerminalUI from "./components/Footer"
 
 function App() {
   return (
@@ -11,8 +12,10 @@ function App() {
       <Hero/>
       <About/>
       <Skills/>
-      <ScrollTop/>
+      <Certification/>
       <TerminalUI/>
+      <ScrollTop/>
+
     </main>
   )
 }

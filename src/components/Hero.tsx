@@ -1,7 +1,9 @@
-import { Facebook, Github, Linkedin, Mail, MousePointerClickIcon, } from "lucide-react";
+import { Github, Linkedin, Mail, MousePointerClickIcon, } from "lucide-react";
 import React from "react";
 
 import sary from "../assets/images/routs.png"
+// import WhatsappIcon from "./icon/WhatsappIcon";
+import whatsapp from "../assets/images/whatsapp.svg";
 
 const Hero: React.FC = () => {
     return (
@@ -24,7 +26,7 @@ const Hero: React.FC = () => {
                             </li>
                             <li >
                                 <a
-                                    href="#"
+                                    href="www.linkedin.com/in/noobieram"
                                     target="_blank" rel="noopener noreferrer"
                                     className="flex items-centert hover:text-teal-500">
                                     <Linkedin size={20} />
@@ -32,10 +34,10 @@ const Hero: React.FC = () => {
                             </li>
                             <li >
                                 <a
-                                    href="#"
+                                    href="https://wa.me/2361347700626"
                                     target="_blank" rel="noopener noreferrer"
                                     className="flex items-centert hover:text-teal-500">
-                                    <Facebook size={20} />
+                                    <img src={whatsapp} alt="WhatsApp" width={19} />
                                 </a>
                             </li>
                             <li >
@@ -58,7 +60,7 @@ const Hero: React.FC = () => {
                             <img src={sary} alt="" className="w-50 h-50 grayscale translate-y-5" />
                         </div>
                         <a href="https://docs.google.com/document/d/1StOsgVgqsSgMX2X_jq8Y1LkqSRjhDxzz6DWMUqXHhm0/edit?usp=sharing"
-                        target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 justify-end border-5 bg-second border-gray-700 bg rounded-full w-60  pe-6 py-2 hover:text-teal-400  absolute bottom-0 left-16 translate-y-[4.5px]">
+                            target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 justify-end border-5 bg-second border-gray-700 bg rounded-full w-60  pe-6 py-2 hover:text-teal-400  absolute bottom-0 left-16 translate-y-[4.5px]">
                             <span className="font-bold">CV </span><MousePointerClickIcon size={16} />
                         </a>
                     </div>
