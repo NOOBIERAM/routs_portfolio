@@ -1,42 +1,12 @@
-import { Database, Zap, Code2, Cpu, Brackets, Dot, Smartphone } from "lucide-react";
+import { Dot } from "lucide-react";
 import React from "react";
+import { SkillsData } from "../data";
 
-const skillsData = [
-    {
-        icon: Code2,
-        title: 'Langages',
-        stacks: ['JavaScript', 'TypeScript', 'PHP', 'HTML', 'CSS', 'SQL'],
-    },
-    {
-        icon: Brackets,
-        title: 'Framework & Bilbiothèques',
-        stacks: ['React', 'Next', 'Vue.js', 'Node.js', 'Express', 'NestJS', 'Tailwind CSS', "Bootstrap 5"],
-    },
-    {
-        icon: Smartphone,
-        title: 'Mobile',
-        stacks: ['ReactNative', 'Flutter'],
-    },
-     {
-        icon: Database,
-        title: 'Database',
-        stacks: ['PostgreSQL', 'MySQL', 'MongoDB'],
-    },
-    {
-        icon: Zap,
-        title: 'Tools',
-        stacks: ['Git', 'Github', 'Docker', 'Supabase','Jira'],
-    },
-    {
-        icon: Cpu,
-        title: 'Os',
-        stacks: ['Ubuntu', 'Windows'],
-    }
-];
+const skillsData = SkillsData
 
 const Skills: React.FC = () => {
     return (
-        <section id="skills">
+        <section id="skills" className="lg:hidden">
             <h1 className="section-title">$ ~/SKILLS <span className="animate-pulse ms-2">_</span> </h1>
 
 

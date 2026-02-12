@@ -1,5 +1,5 @@
 
-import { ChevronRight, TerminalSquareIcon, Shapes, Leaf, Lightbulb, Target, CircleFadingArrowUp, Puzzle, PenTool, Brain } from "lucide-react";
+import { ChevronRight, TerminalSquareIcon, Shapes, Leaf, Lightbulb, Target, CircleFadingArrowUp, Puzzle, Smartphone, Brain } from "lucide-react";
 import React from "react";
 
 const qualityData = [
@@ -12,24 +12,20 @@ const qualityData = [
         icon: Leaf,            // gestion personnelle, autonomie
     },
     {
-        label: "Proactif",
+        label: "Résolveur de problème",
         icon: Lightbulb,          // prend des initiatives
-    },
-    {
-        label: "Rigoureux",
-        icon: Target,             // précision, objectif, discipline
     },
     {
         label: "Progressif",
         icon: CircleFadingArrowUp,              // collaboration
     },
     {
-        label: "Résolveur de problèmes",
+        label: "Code propre",
         icon: Puzzle,             // résolution de problèmes
     },
     {
-        label: "Polyvalent",
-        icon: PenTool,            // adaptable à plusieurs tâches
+        label: "Mobile first",
+        icon: Smartphone,            // adaptable à plusieurs tâches
     },
     {
         label: "Analytique",
@@ -59,9 +55,9 @@ const About: React.FC = () => {
                     </div>
 
                     <div className="my-10 text-start ms-5 sm:mx-auto sm:my-20 sm:text-left w-fit">
-                        <h5 className="text-md sm:text-4xl text-teal-500 tracking-[8px]">#FULLSTACK</h5>
+                        <h5 className="text-md sm:text-3xl text-teal-500 tracking-[8px]">#WEB|MOBILE</h5>
                         <h2 className="font-bold text-3xl sm:text-7xl mb-15 sm:mb-0">
-                            Développeur JavaScript
+                            Développeur Fullstack
                         </h2>
                         <p className="sm:ms-auto sm:max-w-105 font-light my-5">
                             "Attiré par les évolutions technologiques, je développe des solutions concrètes et innovantes, afin que le numérique simplifie le quotidien tout en relevant des défis complexes."
