@@ -1,8 +1,6 @@
 import { Dot } from "lucide-react";
 import React from "react";
-import { SkillsData } from "../data";
-
-const skillsData = SkillsData
+import { skillsData } from "../data/skills";
 
 const Skills: React.FC = () => {
     return (

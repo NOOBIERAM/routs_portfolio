@@ -1,5 +1,5 @@
 
-import { ChevronRight, TerminalSquareIcon, Shapes, Leaf, Lightbulb, Target, CircleFadingArrowUp, Puzzle, Smartphone, Brain } from "lucide-react";
+import { ChevronRight, TerminalSquareIcon, Shapes, Leaf, Lightbulb, CircleFadingArrowUp, Puzzle, Smartphone, Brain } from "lucide-react";
 import React from "react";
 
 const qualityData = [

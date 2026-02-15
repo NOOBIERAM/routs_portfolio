@@ -1,7 +1,7 @@
 
 import React from "react";
 import Cert_7ED092929B39 from "../assets/images/Certificate/7ED092929B39.webp"
-import { LinkIcon } from "lucide-react";
+import { Verified } from "lucide-react";
 
 const certificatesData = [
     {
@@ -34,15 +34,16 @@ const Certification: React.FC = () => {
                                         href={certificate.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="absolute bottom-0 right-0 flex items-center justify-center space-x-3 
-                                        rounded-full px-3 py-1 bg-gray-800 shadow-md shadow-gray-500 text-white translate-y-[-20px]
-                                        sm:opacity-0 sm:translate-y-0 translate-x-[-12px]
+                                        className="absolute bottom-0 right-0 flex items-center justify-center 
+                                        rounded-full px-3 py-1 bg-gray-800 shadow-md text-white translate-y-[-20px]
+                                        md:opacity-0 md:translate-y-0 translate-x-[-12px]
                                         transition-all duration-300
                                         group-hover:opacity-100
-                                        sm:group-hover:translate-y-[-20px]"
+                                        sm:group-hover:translate-y-[-20px]
+                                        group/item"
                                     >
-                                        <span className="text-[13px] font-bold">Ouvrir</span>
-                                        <LinkIcon size={13} />
+                                        <span className="font-bold text-sm max-w-0 max-lg:mx-2 max-lg:max-w-full overflow-hidden whitespace-nowrap transition-all duration-300 group-hover/item:mx-2 group-hover/item:max-w-[120px]">Vérifié</span>
+                                        <Verified className="text-teal-500" size={17} />
                                     </a>
                                 </div>
                                 <h2 className="text-white font-extrabold text-[19px]">{certificate.title}</h2>

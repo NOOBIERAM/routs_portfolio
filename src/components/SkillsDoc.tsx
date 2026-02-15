@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { SkillsData } from "../data";
-const skillsData = SkillsData;
+import { skillsData } from "../data/skills";
 
 const SkillsDoc: React.FC = () => {
     const [selectedIndex, setSelectedIndex] = useState(1)

@@ -3,7 +3,7 @@ import nestjs from '../assets/images/logos/nest.svg'
 import jira from '../assets/images/logos/jira.webp'
 import supabase from '../assets/images/logos/supabase.webp'
 
-export const SkillsData = [
+export const skillsData = [
     {
             icon: Code2,
             title: 'Langages',
