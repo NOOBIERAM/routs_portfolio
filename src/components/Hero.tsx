@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
                             <span className="font-bold">CV </span><MousePointerClickIcon size={16} />
                         </a> */}
                         <div className="scale-70 z-22 p-2 bg-second text-xs font-bold border-3 border-gray-700 rounded-full absolute bottom-0 -right-8 flex items-center justify-center space-x-2">
-                            <Zap size={16} className="text-teal-500"/> <span className="">Disponible</span>
+                            <Zap size={16} className="text-teal-500"/> <span>Disponible</span>
                         </div>
                         {/* <a className="scale-70 z-22 px-2 h-10 bg-second text-sm font-bold border-3 border-teal-500 rounded-full absolute bottom-0 right-33 flex flex-row-reverse items-center justify-center"> */}
                             {/* <ScanEyeIcon size={19} className="text-teal-500" /> <span className="hidden">CV</span> */}
