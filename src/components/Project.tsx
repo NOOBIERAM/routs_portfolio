@@ -22,7 +22,7 @@ const Project: React.FC = () => {
                                         href={data.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="absolute bottom-0 right-0 flex items-center justify-center 
+                                        className="absolute bottom-0 right-0 flex items-center justify-center z-20
                                         rounded-full p-1 px-2 bg-white shadow-md text-gray-800 font-normal -translate-y-3
                                         md:opacity-0 md:translate-y-0 translate-x-[-12px]
                                         transition-all duration-300
@@ -34,8 +34,12 @@ const Project: React.FC = () => {
                                         <ExternalLink size={18} />
                                     </a>
                                 }
+                                {/* <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute bg-white/90 text-black w-full h-full top-0 backdrop-blur-[2px] rounded-lg p-3">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae hic delectus, voluptatibus vel excepturi voluptas sapiente minima eos, accusamus laboriosam odit doloremque? Natus molestias officiis aliquid rerum consequatur ullam saepe.
+                                </div> */}
                             </div>
                             <h2 className="text-xl font-extrabold text-white mt-5">{data.title}</h2>
+                            <p>{data.description}</p>
                             <ul className="flex flex-wrap items-center mt-3 gap-3">
                                 {data.stacks.map((stack, i) =>
                                     <li key={i} className="text-xs border-2 border-teal-500  text-white rounded-full px-2 p-1">{stack}</li>
