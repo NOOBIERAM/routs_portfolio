@@ -72,6 +72,8 @@ const About: React.FC = () => {
                                         </div>
                                     ))
                                 }
+
+                                <p className="text-gray-600 text-center font-bold border-t pt-3">ENI : Ecole Nationale d'Informatique</p>
                             </div>
                         )
                     }
