@@ -1,11 +1,12 @@
 
 import { ChevronRight, TerminalSquareIcon } from "lucide-react";
 import React, { useState } from "react";
-import { qualityDatas } from "../data/abouts";
-import { educaitonDatas } from "../data/abouts";
+import Whoami from "./abouts/Whoami";
+import Education from "./abouts/Education";
+import Experience from "./abouts/Experience";
 
 const About: React.FC = () => {
-    const [view, setView] = useState<"whoami" | "education">("whoami")
+    const [view, setView] = useState<"whoami" | "education" | "experience">("experience")
     return (
         <section id="about">
 
@@ -30,53 +31,14 @@ const About: React.FC = () => {
                             <ChevronRight className={view == "education" ? "text-teal-500" : "text-teal-900"} size={30} />
                             <span className={`${view != "education" && "text-gray-600"}`}>éducation</span>
                         </li>
+                        <li className="flex items-center cursor-pointer" onClick={() => setView("experience")}>
+                            <ChevronRight className={view == "experience" ? "text-teal-500" : "text-teal-900"} size={30} />
+                            <span className={`${view != "experience" && "text-gray-600"}`}>expérience</span>
+                        </li>
                     </ul>
-                    {
-                        view == "whoami" ? (
-                            <div className="my-10 text-start ms-5 sm:mx-auto sm:my-20 sm:text-left w-fit">
-                                <h5 className="text-md sm:text-3xl text-teal-500 tracking-[8px]">#WEB|MOBILE</h5>
-                                <h2 className="font-bold text-3xl sm:text-7xl mb-15 sm:mb-0">
-                                    Développeur Fullstack
-                                </h2>
-                                <p className="sm:ms-auto sm:max-w-105 font-light my-5">
-                                    "Attiré par les évolutions technologiques, je développe des solutions concrètes et innovantes, afin que le numérique simplifie le quotidien tout en relevant des défis complexes."
-                                </p>
-                                <div className="sm:ms-auto sm:max-w-105 text-start mt-8 fit flex flex-wrap gap-3">
-                                    {
-                                        qualityDatas.map((quality, index) => {
-                                            const Icon = quality.icon
-                                            return (
-                                                <div key={index} className="flex items-center justify-center border-2 py-1 px-3 rounded-full font-bold text-xs space-x-2"><Icon size={22} /><span>{quality.label}</span></div>
-                                            )
-                                        })
-                                    }
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="sm:flex sm:flex-col sm:space-y-10 my-10 ms-5 sm:mx-auto sm:my-10 sm:text-left w-fit">
-                                {
-                                    educaitonDatas.map((education, index) => (
-                                        <div key={index} className={`flex space-x-10 p-5 ${index == 0 && "bg-gray-400 rounded text-black font-bold"}`}>
-                                            <span className={index == 0 ? "text-gray-600" : "text-gray-500"}>{education.years}</span>
-                                            <div>
-                                                <h5>{education.school}</h5>
-                                                <p>{education.program}</p>
-                                                {
-                                                    education.obtained_degree && <p className="text-teal-500">
-                                                        <span className="underline underline-offset-5">Obtention du diplôme :</span> {education.obtained_degree}
-                                                    </p>
-                                                }
-                                                <h2 className="text-4xl font-sans font-semibold mt-2">{education.degree}</h2>
-
-                                            </div>
-                                        </div>
-                                    ))
-                                }
-
-                                <p className="text-gray-600 text-center font-bold border-t pt-3">ENI : Ecole Nationale d'Informatique</p>
-                            </div>
-                        )
-                    }
+                    {view === "whoami" && <Whoami />}
+                    {view === "education" && <Education />}
+                    {view === "experience" && <Experience />}
 
                 </div>
             </div>

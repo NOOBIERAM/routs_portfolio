@@ -32,12 +32,9 @@ const SkillsDoc: React.FC = () => {
                                             </div>
                                             <div className="absolute -top-8 right-0 bg-gray-700 rounded-xl text-xs p-2 w-max hidden group-hover:block">{ skills.stacks[index]}</div>
                                         </div>
-
                                     ))}
-
                                 </div>
                             </div>
-
                         </div>
                     );
                 })}

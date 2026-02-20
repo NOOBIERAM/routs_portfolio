@@ -1,5 +1,5 @@
 
-import { Shapes, Leaf, Lightbulb, CircleFadingArrowUp, Puzzle, Smartphone, Brain } from "lucide-react";
+import { Shapes, Leaf, Lightbulb, CircleFadingArrowUp, Puzzle, Smartphone, Brain, Boxes } from "lucide-react";
 export const qualityDatas = [
     {
         label: "Créatif",
@@ -20,6 +20,10 @@ export const qualityDatas = [
     {
         label: "Code propre",
         icon: Puzzle,             // résolution de problèmes
+    },
+    {
+        label: "POO",
+        icon: Boxes,             // résolution de problèmes
     },
     {
         label: "Mobile first",
@@ -53,4 +57,28 @@ export const educaitonDatas = [
         degree : "Licence en informatique",
         obtained_degree : "2024"
     }
+]
+
+export const experienceDatas = [
+    {
+        years : "Août - Nov 2024",
+        company : "Douanes Toliara",
+        role : "Développeur Fullstack | Stage",
+        description : "Développement d'une applicaiton pour la suivie des visites effectuées sur les marchandises importé.",
+        stacks: ["VueJS","Bootstrap","Express","Mysql","Socket.io"]
+    },
+    {
+        years : "Sept - Nov 2023",
+        company : "Computer Store, Fianarantsoa",
+        role : "Développeur Fullstack | Stage",
+        description : "Développement d'une outil de gestion de stock et de vente des matériels informatiques.",
+        stacks: ["React","Bootstrap","Express","PostgreSQL"]
+    },
+    {
+        years : "Août 2023",
+        company : "Natik Corporation, Fianarantsoa",
+        role : "Développeur fullstack ",
+        description : "Développement d'un outil de gestion de vente",
+        stacks: ["VueJS","Bootstrap","Express","Mysql"]
+    },
 ]

@@ -22,7 +22,7 @@ export const projectsData = [
         description:"Plateforme de recharge de diamants pour Free Fire.",
         stacks:["React","Tailwind CSS","Supabase (BaaS)"],
         link: "https://noobieram.github.io/FF_TopUp/",
-        github:"",
+        github:"https://github.com/NOOBIERAM/FF_TopUp#",
         img: ff_topup
     },
     {

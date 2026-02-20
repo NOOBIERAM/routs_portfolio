@@ -11,11 +11,11 @@ const Project: React.FC = () => {
                 {
                     projectsData.map((data, index) =>
                         <div key={index} className="group ">
-                            <div className="relative">
+                            <div className="relative ">
                                 <img
                                     src={data.img}
                                     alt={data.title}
-                                    className="relative w-150 rounded-lg"
+                                    className="relative rounded-lg"
                                 />
                                 { data.link &&
                                     <a
