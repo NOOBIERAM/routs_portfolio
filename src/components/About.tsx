@@ -6,7 +6,7 @@ import Education from "./abouts/Education";
 import Experience from "./abouts/Experience";
 
 const About: React.FC = () => {
-    const [view, setView] = useState<"whoami" | "education" | "experience">("experience")
+    const [view, setView] = useState<"whoami" | "education" | "experience">("whoami")
     return (
         <section id="about">
 
