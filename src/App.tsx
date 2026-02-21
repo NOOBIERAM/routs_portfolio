@@ -14,16 +14,16 @@ function App() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("https://project-idea-back-1.onrender.com/health"); // ton endpoint backend
-        if (!res.ok) throw new Error("Erreur lors du fetch des projets");
-        console.log(res.json()); // Affiche la réponse du backend
-      } catch (err: any) {
-      } finally {
+        const res = await fetch("https://project-idea-back-1.onrender.com/health");
+        const data = await res.json();
+        console.log("Fetching:", data);
+      } catch (error) {
+        console.error("Erreur lors du fetch:", error);
       }
     };
 
     fetchProjects();
-  }, [])
+  }, []);
 
   return (
     <main className=" font-mono">
