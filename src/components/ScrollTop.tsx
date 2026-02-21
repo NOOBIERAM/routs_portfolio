@@ -22,7 +22,7 @@ const ScrollTop: React.FC = () => {
         <div
             className={`fixed z-50 bottom-6 right-6 transition-all duration-700 flex flex-col sm:flex-row space-y-2 sm:space-x-3 ${isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         >
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="w-12 sm:w-max h-12 sm:px-3 sm:space-x-3 flex items-center  justify-center border-3 border-white/80 bg-gray-800 rounded-xl  hover:text-teal-400 text-white/80 font-bold">
+            <a href="/CV_Rotsiniaina.pdf" target="_blank" rel="noopener noreferrer" className="w-12 sm:w-max h-12 sm:px-3 sm:space-x-3 flex items-center  justify-center border-3 border-white/80 bg-gray-800 rounded-xl  hover:text-teal-400 text-white/80 font-bold">
                 <ScanEyeIcon className="hidden sm:block" size={20} /> <span>CV</span>
             </a>
             <button
