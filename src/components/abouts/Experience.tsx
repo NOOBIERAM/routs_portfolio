@@ -6,9 +6,9 @@ const Experience = () => {
             {
                 experienceDatas.map((Experience, index) => (
                     <div key={index} className={`flex max-sm:flex-col space-x-10 p-5`}>
-                        <div className="w-50 text-right">
+                        <div className="w-50 sm:text-right max-sm:mb-5">
                             <span className="text-lg">{Experience.years}</span>
-                            <div className="flex flex-wrap space-x-3 items-center justify-end">
+                            <div className="flex flex-wrap space-x-3 items-center sm:justify-end">
                                 {
                                 Experience.stacks.map((stack, index) => (
                                     <p key={index} className="text-sm text-gray-500"># {stack}</p>

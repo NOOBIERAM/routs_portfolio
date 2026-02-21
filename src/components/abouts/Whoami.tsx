@@ -3,7 +3,7 @@ import { qualityDatas } from "../../data/abouts"
 const Whoami = () => {
     return (
         <div className="my-10 text-start ms-5 sm:mx-auto sm:my-20 sm:text-left w-fit">
-            <h5 className="text-md sm:text-3xl text-teal-500 tracking-[8px]">#WEB|MOBILE|BACKEND</h5>
+            <h5 className="text-md sm:text-3xl text-teal-500 tracking-[8px]">#WEB|MOBILE</h5>
             <h2 className="font-bold text-3xl sm:text-7xl mb-15 sm:mb-0">
                 Développeur Fullstack
             </h2>

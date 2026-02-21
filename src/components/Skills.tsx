@@ -27,9 +27,9 @@ const Skills: React.FC = () => {
                                 {skills.stacks.map((stack, index) => (
                                     <div
                                         key={index}
-                                        className={` py-2 text-teal-500  transition-all duration-300 flex items-center justify-center `}
+                                        className={` max-sm:py-0 py-2 text-teal-500  transition-all duration-300 flex items-center justify-center `}
                                     >
-                                        <Dot className="text-teal-700" />
+                                        <Dot className="text-teal-700"/>
                                         <span className="text-sm">
                                             {stack}
                                         </span>

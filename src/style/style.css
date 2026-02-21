@@ -37,7 +37,7 @@
     @apply bg-gray-800 text-gray-400;
   }
   section {
-    @apply px-10 lg:px-75 min-h-screen flex flex-col justify-center;
+    @apply px-10 lg:px-75 min-h-screen flex flex-col justify-center max-sm:px-4;
   }
   .section-title {
     @apply text-xl md:text-3xl font-bold mb-15 text-gray-200 flex items-center

@@ -23,7 +23,7 @@ export default function SplashScreen({ onFinish }: { onFinish: () => void }) {
                     setTimeout(onFinish, 400);
                     return 100;
                 }
-                return prev + 3;
+                return prev + 4;
             });
         }, 100);
         return () => clearInterval(interval);
