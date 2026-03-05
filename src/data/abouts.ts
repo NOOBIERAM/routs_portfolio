@@ -61,24 +61,24 @@ export const educaitonDatas = [
 
 export const experienceDatas = [
     {
-        years : "Août - Nov 2024",
+        years : "Août - Déc 2024",
         company : "Douanes Toliara",
-        role : "Développeur Fullstack | Stage",
-        description : "Développement d'une applicaiton pour la suivie des visites effectuées sur les marchandises importé.",
-        stacks: ["VueJS","Bootstrap","Express","Mysql","Socket.io"]
+        role : "Stagiaire développeur FullStack",
+        description : "Développement d'une application de suivi des visites effectuées sur les marchandises importées au portde Toliara. Conception de l'architecture et des données, création d'interfaces utilisateurs responsives, gestion du backend et des API, intégration d'une assistance IA pour analyser et extraire des données dans des fichiers PDF et images, gestion de sécurité et des utilisateurs, notifications intelligentes en temps réel.",
+        stacks: ["React","TailwindCSS","ExpressJs","Socket.IO","PostgreSQL","Sequelize"]
     },
     {
-        years : "Sept - Nov 2023",
-        company : "Computer Store, Fianarantsoa",
-        role : "Développeur Fullstack | Stage",
-        description : "Développement d'une outil de gestion de stock et de vente des matériels informatiques.",
-        stacks: ["React","Bootstrap","Express","PostgreSQL"]
+        years : "Sep - Nov 2023",
+        company : "Computer Store Fianarantsoa",
+        role : "Stagiaire développeur FullStack",
+        description : "Développement d'un outil de gestion de stock des matériels informatiques. Conception de l'architecture et réalisation de rapports journaliers des stocks.",
+        stacks: ["VueJs","Bootstrap","ExpressJs","MySQL","Sequelize"]
     },
     {
         years : "Août 2023",
-        company : "Natik Corporation, Fianarantsoa",
-        role : "Développeur fullstack ",
-        description : "Développement d'un outil de gestion de vente",
-        stacks: ["VueJS","Bootstrap","Express","Mysql"]
+        company : "Natik Corporation",
+        role : "Développeur FullStack",
+        description : "Conception et développement d'un outil de gestion de vente. Développement des fonctionnalités et création d'interfaces interactives.",
+        stacks: ["Vue","Bootstrap","ExpressJs","MySQL","Sequelize"]
     },
 ]
