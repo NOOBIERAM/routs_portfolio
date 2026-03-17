@@ -29,7 +29,7 @@ export const projectsData = [
         title: "ENI Connect",
         description:"Application de messagerie securisé conçue pour les etudiants et personnel de l'ENI",
         stacks:["React","Tailwind CSS"],
-        link: "https://noobieram.github.io/FF_TopUp/",
+        link: "",
         github:"",
         img: eni
     },
@@ -45,7 +45,7 @@ export const projectsData = [
         title: "Critical Path Method (CPM)",
         description:"Application pour le calcul automatique du chemin critique et l’affichage graphique du réseau de tâches et de leurs dépendances.",
         stacks:["VueJS","Bootstrap 5","JavaScript", "Mermaid (graph)"],
-        link: "https://noobieram.github.io/FF_TopUp/",
+        link: "",
         github:"",
         img: cpm
     },
@@ -53,7 +53,7 @@ export const projectsData = [
         title: "Co-Reservation",
         description:"Site de réservation de place dans une coopérative",
         stacks:["VueJS","Bootstrap 5","Express","Sequelize", "MySQL"],
-        link: "https://noobieram.github.io/FF_TopUp/",
+        link: "",
         github:"",
         img: reservation
     },
