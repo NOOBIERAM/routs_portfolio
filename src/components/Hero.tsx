@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
                             </li>
                             <li >
                                 <a
-                                    href="www.linkedin.com/in/noobieram"
+                                    href="https://www.linkedin.com/in/noobieram"
                                     target="_blank" rel="noopener noreferrer"
                                     className="flex items-centert hover:text-teal-500">
                                     <Linkedin size={20} />

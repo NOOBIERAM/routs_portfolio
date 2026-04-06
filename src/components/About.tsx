@@ -22,18 +22,18 @@ const About: React.FC = () => {
                     </div>
                 </div>
                 <div className="relative p-5 text-sm flex flex-col items-start">
-                    <ul>
-                        <li className="flex items-center cursor-pointer" onClick={() => setView("whoami")}>
-                            <ChevronRight className={view == "whoami" ? "text-teal-500" : "text-teal-900"} size={30} />
-                            <span className={`${view != "whoami" && "text-gray-600"}`}>whoami</span>
+                    <ul className="bg-white rounded-lg p-2 pe-3">
+                        <li className={`flex items-center cursor-pointer ${view == "whoami" ? "text-teal-500" : "text-gray-800 "}`} onClick={() => setView("whoami")}>
+                            <ChevronRight size={30} />
+                            <span>whoami</span>
                         </li>
-                        <li className="flex items-center cursor-pointer" onClick={() => setView("education")}>
-                            <ChevronRight className={view == "education" ? "text-teal-500" : "text-teal-900"} size={30} />
-                            <span className={`${view != "education" && "text-gray-600"}`}>éducation</span>
+                        <li className={`flex items-center cursor-pointer ${view == "education" ? "text-teal-500" : "text-gray-800"}`} onClick={() => setView("education")}>
+                            <ChevronRight size={30} />
+                            <span>éducation</span>
                         </li>
-                        <li className="flex items-center cursor-pointer" onClick={() => setView("experience")}>
-                            <ChevronRight className={view == "experience" ? "text-teal-500" : "text-teal-900"} size={30} />
-                            <span className={`${view != "experience" && "text-gray-600"}`}>expérience</span>
+                        <li className={`flex items-center cursor-pointer ${view == "experience" ? "text-teal-500" : "text-gray-800"}`} onClick={() => setView("experience")}>
+                            <ChevronRight size={30} />
+                            <span>expérience</span>
                         </li>
                     </ul>
                     {view === "whoami" && <Whoami />}
