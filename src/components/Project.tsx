@@ -51,9 +51,6 @@ const Project: React.FC = () => {
                                         <ExternalLink size={18} />
                                     </a>
                                 }
-                                {/* <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute bg-white/90 text-black w-full h-full top-0 backdrop-blur-[2px] rounded-lg p-3">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae hic delectus, voluptatibus vel excepturi voluptas sapiente minima eos, accusamus laboriosam odit doloremque? Natus molestias officiis aliquid rerum consequatur ullam saepe.
-                                </div> */}
                             </div>
                             <h2 className="text-xl font-extrabold text-white mt-5">{data.title}</h2>
                             <p>{data.description}</p>
