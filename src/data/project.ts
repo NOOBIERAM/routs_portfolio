@@ -5,10 +5,19 @@ import eni from "../assets/images/project/eni_mail.webp"
 import kiddo from "../assets/images/project/kiddo.webp"
 import cpm from "../assets/images/project/cpm.webp"
 import reservation from "../assets/images/project/co-reservation.webp"
+import sudoku from "../assets/images/project/sudoku.webp"
 
 //TODO Lien vers le repo 
 
 export const projectsData = [
+    {
+        title: "SUDOKU solver",
+        description:"Application de résolution et de génération de Sudoku 9x9 basée sur la programmation par contraintes (CSP), intégrant propagation de contraintes, backtracking et un solveur Google OR-Tools pour garantir une résolution optimale.",
+        stacks:["React","Tailwind CSS","FastAPI","Python","Google OR-Tools"],
+        link: "",
+        github:"https://github.com/NOOBIERAM/Sudoku_solver.git",
+        img: sudoku
+    },
     {
         title: "Project-IDEA",
         description:"Siteweb générateur d'idée de projet assisté par IA pour les développeurs.",
@@ -46,7 +55,7 @@ export const projectsData = [
         description:"Application pour le calcul automatique du chemin critique et l’affichage graphique du réseau de tâches et de leurs dépendances.",
         stacks:["VueJS","Bootstrap 5","JavaScript", "Mermaid (graph)"],
         link: "",
-        github:"",
+        github:"https://github.com/NOOBIERAM/CPM-manager.git",
         img: cpm
     },
     {
@@ -61,7 +70,7 @@ export const projectsData = [
         title: "Mon Portfolio",
         description:"",
         stacks:["React","Tailwind CSS"],
-        link: "",
+        link: "routsgg.me",
         github:"",
         img: portfolio
     }

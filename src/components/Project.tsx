@@ -34,6 +34,23 @@ const Project: React.FC = () => {
                                         <ExternalLink size={18} />
                                     </a>
                                 }
+                                { data.github &&
+                                    <a
+                                        href={data.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="absolute bottom-0 right-0 flex items-center justify-center z-20
+                                        rounded-full p-1 px-2 bg-white shadow-md text-gray-800 font-normal -translate-y-3
+                                        md:opacity-0 md:translate-y-0 translate-x-[-12px]
+                                        transition-all duration-300
+                                        group-hover:opacity-100
+                                        sm:group-hover:translate-y-[-12px]
+                                        group/item"
+                                    >
+                                        <span className="font-bold text-sm max-w-0 max-lg:mx-2 max-lg:max-w-full overflow-hidden whitespace-nowrap transition-all duration-300 group-hover/item:mx-2 group-hover/item:max-w-[120px]">Repo</span>
+                                        <ExternalLink size={18} />
+                                    </a>
+                                }
                                 {/* <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute bg-white/90 text-black w-full h-full top-0 backdrop-blur-[2px] rounded-lg p-3">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae hic delectus, voluptatibus vel excepturi voluptas sapiente minima eos, accusamus laboriosam odit doloremque? Natus molestias officiis aliquid rerum consequatur ullam saepe.
                                 </div> */}
