@@ -6,72 +6,81 @@ import kiddo from "../assets/images/project/kiddo.webp"
 import cpm from "../assets/images/project/cpm.webp"
 import reservation from "../assets/images/project/co-reservation.webp"
 import sudoku from "../assets/images/project/sudoku.webp"
+import aquasense from "../assets/images/project/aquasense.webp"
 
 //TODO Lien vers le repo 
 
 export const projectsData = [
     {
-        title: "SUDOKU solver",
-        description:"Application de résolution et de génération de Sudoku 9x9 basée sur la programmation par contraintes (CSP), intégrant propagation de contraintes, backtracking et un solveur Google OR-Tools pour garantir une résolution optimale.",
-        stacks:["React","Tailwind CSS","FastAPI","Python","Google OR-Tools"],
+        title: "Aquasense",
+        description: "Projet embarqué pour la mesure du niveau d'eau avec un ESP32 et un capteur ultrason HC-SR04. Les mesures sont filtrées avec un filtre médian anti-pics, puis envoyées vers ThingSpeak soit par WiFi d'un module ESP32, soit par GSM/GPRS avec un module SIM800L.",
+        stacks: ["Arduino","API ThingSpeak", "ESP32", "HC-SR04", "SIM800L"],
         link: "",
-        github:"https://github.com/NOOBIERAM/Sudoku_solver.git",
+        github: "https://github.com/NOOBIERAM/Aquasense-Pro---ESP32.git",
+        img: aquasense
+    },
+    {
+        title: "SUDOKU solver",
+        description: "Application de résolution et de génération de Sudoku 9x9 basée sur la programmation par contraintes (CSP), intégrant propagation de contraintes, backtracking et un solveur Google OR-Tools pour garantir une résolution optimale.",
+        stacks: ["React", "Tailwind CSS", "FastAPI", "Python", "Google OR-Tools"],
+        link: "",
+        github: "https://github.com/NOOBIERAM/Sudoku_solver.git",
         img: sudoku
     },
     {
         title: "Project-IDEA",
-        description:"Siteweb générateur d'idée de projet assisté par IA pour les développeurs.",
-        stacks:["React","Tailwind CSS","Nest","Prisma","PostgreSQL","Mistral AI"],
+        description: "Siteweb générateur d'idée de projet assisté par IA pour les développeurs.",
+        stacks: ["React", "Tailwind CSS", "Nest", "Prisma", "PostgreSQL", "Mistral AI"],
         link: "https://noobieram.github.io/project-IDEA-front/",
-        github:"",
+        github: "",
         img: projectidea
     },
     {
         title: "Mada TopUp",
-        description:"Plateforme de recharge de diamants pour Free Fire.",
-        stacks:["React","Tailwind CSS","Supabase (BaaS)"],
+        description: "Plateforme de recharge de diamants pour Free Fire.",
+        stacks: ["React", "Tailwind CSS", "Supabase (BaaS)"],
         link: "https://noobieram.github.io/FF_TopUp/",
-        github:"https://github.com/NOOBIERAM/FF_TopUp#",
+        github: "https://github.com/NOOBIERAM/FF_TopUp#",
         img: ff_topup
     },
     {
         title: "ENI Connect",
-        description:"Application de messagerie securisé conçue pour les etudiants et personnel de l'ENI",
-        stacks:["React","Tailwind CSS"],
+        description: "Application de messagerie securisé conçue pour les etudiants et personnel de l'ENI",
+        stacks: ["React", "Tailwind CSS"],
         link: "",
-        github:"",
+        github: "",
         img: eni
     },
     {
         title: "Kiddo Kids",
-        description:"Applicaiton éducative destinée aux enfants de 5 à 8 ans avec des jeux interactifs et des activités d’apprentissage adaptées.",
-        stacks:["React","Tailwind CSS"],
+        description: "Applicaiton éducative destinée aux enfants de 5 à 8 ans avec des jeux interactifs et des activités d’apprentissage adaptées.",
+        stacks: ["React", "Tailwind CSS"],
         link: "",
-        github:"",
+        github: "",
         img: kiddo
     },
     {
         title: "Critical Path Method (CPM)",
-        description:"Application pour le calcul automatique du chemin critique et l’affichage graphique du réseau de tâches et de leurs dépendances.",
-        stacks:["VueJS","Bootstrap 5","JavaScript", "Mermaid (graph)"],
+        description: "Application pour le calcul automatique du chemin critique et l’affichage graphique du réseau de tâches et de leurs dépendances.",
+        stacks: ["VueJS", "Bootstrap 5", "JavaScript", "Mermaid (graph)"],
         link: "",
-        github:"https://github.com/NOOBIERAM/CPM-manager.git",
+        github: "https://github.com/NOOBIERAM/CPM-manager.git",
         img: cpm
     },
     {
         title: "Co-Reservation",
-        description:"Site de réservation de place dans une coopérative",
-        stacks:["VueJS","Bootstrap 5","Express","Sequelize", "MySQL"],
+        description: "Site de réservation de place dans une coopérative",
+        stacks: ["VueJS", "Bootstrap 5", "Express", "Sequelize", "MySQL"],
         link: "",
-        github:"",
+        github: "",
         img: reservation
     },
     {
         title: "Mon Portfolio",
-        description:"",
-        stacks:["React","Tailwind CSS"],
+        description: "",
+        stacks: ["React", "Tailwind CSS"],
         link: "routsgg.me",
-        github:"",
+        github: "",
         img: portfolio
     }
 ]
