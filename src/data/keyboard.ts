@@ -92,4 +92,4 @@ export const CHAR_TO_CODES: Record<string, string[]> = {
   "⏎": ["Enter"],
 };
 
-export const TYPING_TEXT = "./start.sh";
+export const TYPING_TEXT = "curl http://routsgg.me";

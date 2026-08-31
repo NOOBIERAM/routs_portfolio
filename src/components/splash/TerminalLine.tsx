@@ -16,8 +16,15 @@ export function TerminalLine({ typed, showOutput }: Props) {
           />
         </div>
         {showOutput && (
-          <div className="mt-2 text-text-muted text-[13px] sm:text-sm animate-[fadeInUp_300ms_ease]">
-            <span className="text-accent">&gt;</span> booting portfolio…
+          <div className="mt-2 flex items-center gap-2.5 text-text-muted text-[13px] sm:text-sm animate-[fadeInUp_300ms_ease]">
+            <span className="text-accent">&gt;</span>
+            <span>Booting portfolio…</span>
+            <span
+              aria-hidden="true"
+              className="slash-inline slash-inline--spin inline-flex items-center justify-center shrink-0 ml-1 text-accent font-bold leading-none select-none"
+            >
+              /
+            </span>
           </div>
         )}
       </div>
