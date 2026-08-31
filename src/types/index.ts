@@ -46,6 +46,26 @@ export type SkillCategory = {
 export type SkillItem = {
   name: string;
   logo?: string;
+  parent?: string;
+};
+
+export type SkillNode = {
+  name: string;
+  logo?: string;
+  icon?: string;
+  children?: SkillNode[];
+};
+
+export type SkillTreeCategory = {
+  label: string;
+  icon: string;
+  nodes: SkillNode[];
+};
+
+export type FreeSkillGroup = {
+  label: string;
+  icon: string;
+  items: SkillItem[];
 };
 
 export type ProjectItem = {

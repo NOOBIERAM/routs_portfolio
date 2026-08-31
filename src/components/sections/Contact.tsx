@@ -138,7 +138,7 @@ export function Contact() {
                 <span>RoutGG</span>
                 <span className="text-text-muted/50">— scan</span>
               </div>
-              <div className="relative">
+              <div className="relative p-2">
                 <span
                   aria-hidden="true"
                   className="pointer-events-none absolute -top-1.5 -left-1.5 h-6 w-6 rounded-tl-lg border-l-2 border-t-2 border-accent"
@@ -156,12 +156,12 @@ export function Contact() {
                   className="pointer-events-none absolute -bottom-1.5 -right-1.5 h-6 w-6 rounded-br-lg border-b-2 border-r-2 border-accent"
                 />
                 <img
-                  src="/RoutGG.png"
+                  src="/qrcode.png"
                   alt="QR code RoutGG — scannez pour voir mes contacts"
                   width={180}
                   height={180}
                   loading="lazy"
-                  className="h-42 w-42 object-contain"
+                  className="h-42 w-42 object-contain rounded-sm"
                 />
               </div>
               <p className="text-center font-mono text-xs leading-relaxed text-text-muted">

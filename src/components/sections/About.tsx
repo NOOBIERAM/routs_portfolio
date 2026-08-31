@@ -87,7 +87,7 @@ export function About() {
           <div className="p-5 sm:p-7">
             {/* zsh powerlevel10k prompt */}
             <div className="mb-4 font-mono text-xs select-none">
-              <div className="flex flex-wrap items-stretch overflow-hidden rounded-md border border-white/10 [html.light_&]:border-border max-w-full">
+              <div className="flex flex-wrap items-stretch overflow-hidden rounded-md  border-white/10 [html.light_&]:border-border max-w-full">
                 <div className="flex items-center gap-1.5 bg-[#264464] px-2.5 py-1.5 text-white">
                   <span className="hidden sm:inline">rotsi@routsgg</span>
                   <span className="sm:hidden">rotsi</span>
@@ -112,9 +112,10 @@ export function About() {
                   <span>main</span>
                   <span className="hidden sm:inline font-normal opacity-70">✓</span>
                 </div>
-                <div className="flex-1 min-w-[12px] bg-terminal hidden sm:block" aria-hidden="true" />
-                <div className="hidden sm:flex items-center gap-1 bg-terminal px-2 py-1.5 text-text-muted/60">
-                  <span suppressHydrationWarning>{time}</span>
+                <div className="flex items-stretch">
+                  <svg width="10" height="24" viewBox="0 0 10 24" className="h-auto w-[10px] block" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M0 0 L10 12 L0 24 Z" fill="#14b8a6" />
+                  </svg>
                 </div>
               </div>
               <div className="mt-2 flex items-center gap-2">
@@ -139,7 +140,7 @@ export function About() {
             {/* pane divider — horizontal split like tmux */}
             <div className="mt-6 flex items-center gap-2 font-mono text-xs text-border">
               <span className="h-px flex-1 bg-border" />
-              <span className="border border-border rounded px-2 py-0.5 bg-bg-second text-text-muted">─ qualités ─</span>
+              <span className="px-2 py-0.5 bg-bg-second text-text-muted">─ qualités ─</span>
               <span className="h-px flex-1 bg-border" />
             </div>
 
@@ -151,9 +152,8 @@ export function About() {
                   return (
                     <div
                       key={q.label}
-                      className={`group relative flex min-w-[118px] sm:min-w-[136px] flex-col items-center gap-2 rounded-md border bg-quality px-4 py-4 sm:px-5 sm:py-5 text-center shadow-sm transition-all duration-300 will-change-transform hover:z-20 hover:scale-[1.06] hover:!rotate-0 hover:!translate-y-0 hover:!translate-x-0 hover:shadow-lg hover:shadow-accent/10 [html.light_&]:!border-border ${i === 0 ? "border-accent/50 [html.light_&]:!border-accent/50" : "border-white/10"} ${scattered[i % scattered.length]}`}
+                      className={`group relative flex min-w-[118px] sm:min-w-[136px] flex-col items-center gap-2  px-4 py-4 sm:px-5 sm:py-5 text-center  transition-all duration-300 will-change-transform hover:z-20 hover:scale-[1.06] hover:!rotate-0 hover:!translate-y-0 hover:!translate-x-0  [html.light_&]:!border-border ${i === 0 ? "border-accent/50 [html.light_&]:!border-accent/50" : "border-white/10"} ${scattered[i % scattered.length]}`}
                     >
-                      <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-accent/30 border border-accent/40 hidden sm:block" aria-hidden="true" />
                       <Icon size={18} className="text-accent transition-transform duration-300 group-hover:scale-110" />
                       <span className="text-xs font-medium leading-tight text-text">{q.label}</span>
                     </div>
