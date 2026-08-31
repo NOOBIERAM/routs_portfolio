@@ -33,20 +33,35 @@ export function Contact() {
         Un projet en tête ? N&apos;hésitez pas à me contacter — réponse rapide garantie.
       </p>
 
-      <div className="mt-8 grid gap-6 lg:grid-cols-[1.65fr_340px]">
-        {/* neofetch */}
-        <div className="overflow-hidden rounded-lg border border-accent/20 bg-terminal shadow-lg shadow-black/10">
-          <div className="border-2 border-accent/30 m-1 sm:m-2 rounded-md overflow-hidden bg-terminal">
-            <div className="flex items-center justify-between border-b border-accent/20 bg-accent/10 px-3 py-1.5 font-mono text-xs">
-              <span className="flex items-center gap-2">
-                <span className="inline-block h-2 w-2 rounded-full bg-accent animate-pulse" aria-hidden="true" />
-                <span className="text-accent font-bold">neofetch</span>
-                <span className="text-text-muted">— contact</span>
+      <div className="mt-8 overflow-hidden rounded-lg border border-accent/20 bg-terminal shadow-lg shadow-black/10">
+        <div className="border-2 border-accent/30 m-1 sm:m-2 rounded-md overflow-hidden bg-terminal">
+          {/* tmux header — single terminal */}
+          <div className="flex items-center justify-between border-b border-accent/20 bg-accent/10 px-3 py-1.5 font-mono text-xs">
+            <span className="flex items-center gap-2 min-w-0">
+              <span className="hidden sm:flex items-center gap-1.5 shrink-0" aria-hidden="true">
+                <span className="h-2.5 w-2.5 rounded-full bg-red-400/90" />
+                <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/90" />
+                <span className="h-2.5 w-2.5 rounded-full bg-green-400/90" />
               </span>
-              <span className="text-text-muted/60 hidden sm:inline">80×18 • utf-8</span>
-            </div>
+              <span className="inline-block h-2 w-2 rounded-full bg-accent animate-pulse shrink-0 sm:hidden" aria-hidden="true" />
+              <span className="text-accent font-bold truncate">tmux</span>
+              <span className="text-text-muted hidden sm:inline truncate">— routs@routsgg: ~/contact</span>
+              <span className="hidden lg:inline-flex items-center gap-1 ml-2 text-[10px] leading-none">
+                <span className="rounded bg-accent px-1.5 py-0.5 font-bold text-terminal">0:neofetch*</span>
+                <span className="rounded bg-accent/15 px-1.5 py-0.5 text-text-muted border border-accent/20">1:qr</span>
+              </span>
+            </span>
+            <span className="text-text-muted/60 hidden sm:inline shrink-0">tmux 2 panes • utf-8</span>
+          </div>
 
-            <div className="p-4 sm:p-6">
+          {/* tmux split — 2 panes in one terminal */}
+          <div className="grid lg:grid-cols-[1.65fr_340px] divide-y lg:divide-y-0 lg:divide-x divide-accent/20">
+            {/* pane 0 — neofetch */}
+            <div className="relative p-4 sm:p-6">
+              <div className="absolute top-2 right-2 hidden sm:inline-flex items-center gap-1.5 font-mono text-[10px] leading-none text-text-muted/70">
+                <span className="h-3 w-3 rounded-sm border border-accent/30 bg-accent/10 flex items-center justify-center text-accent font-bold">0</span>
+                <span>neofetch</span>
+              </div>
               <div className="font-mono text-xs mb-4 flex items-center gap-2">
                 <span className="text-accent">❯</span>
                 <span className="text-text">neofetch</span>
@@ -111,28 +126,45 @@ export function Contact() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* RoutGG image */}
-        <div className="rounded-xl border border-border bg-bg-second p-5 sm:p-6 flex flex-col items-center gap-4 h-fit lg:sticky lg:top-24">
-          <div className="flex items-center gap-2 font-mono text-xs text-text-muted">
-            <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
-            <span>RoutGG</span>
+            {/* pane 1 — QR */}
+            <div className="relative flex flex-col items-center gap-4 p-5 sm:p-6 bg-bg-second/20 lg:bg-terminal">
+              <div className="absolute top-2 right-2 hidden sm:inline-flex items-center gap-1.5 font-mono text-[10px] leading-none text-text-muted/70">
+                <span className="h-3 w-3 rounded-sm border border-border bg-bg-second flex items-center justify-center text-text-muted font-bold">1</span>
+                <span>qr</span>
+              </div>
+              <div className="flex items-center gap-2 font-mono text-xs text-text-muted mt-1 sm:mt-0">
+                <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
+                <span>RoutGG</span>
+                <span className="text-text-muted/50">— scan</span>
+              </div>
+              <div className="bg-white p-3 rounded-xl shadow-md">
+                <img
+                  src="/RoutGG.png"
+                  alt="QR code RoutGG — scannez pour voir mes contacts"
+                  width={180}
+                  height={180}
+                  loading="lazy"
+                  className="h-[180px] w-[180px] object-contain"
+                />
+              </div>
+              <p className="text-center font-mono text-xs leading-relaxed text-text-muted">
+                Scannez pour <span className="text-text font-medium">voir mes contacts</span>
+              </p>
+              <p className="font-mono text-[10px] leading-none text-text-muted/60">pane 1 • 180×180</p>
+            </div>
           </div>
-          <div className="bg-white p-3 rounded-xl shadow-md">
-            <img
-              src="/RoutGG.png"
-              alt="QR code RoutGG — scannez pour voir mes contacts"
-              width={180}
-              height={180}
-              loading="lazy"
-              className="h-[180px] w-[180px] object-contain"
-            />
+
+          {/* tmux status bar */}
+          <div className="flex items-center justify-between gap-2 border-t border-accent/20 bg-accent/10 px-2 sm:px-3 py-1 font-mono text-[10px] sm:text-xs leading-none">
+            <span className="flex items-center gap-1 sm:gap-1.5 min-w-0">
+              <span className="hidden sm:inline text-text-muted">[0]</span>
+              <span className="rounded-sm bg-accent px-1.5 py-1 font-bold text-terminal">0:neofetch*</span>
+              <span className="rounded-sm border border-accent/20 bg-terminal px-1.5 py-1 text-text-muted">1:qr</span>
+            </span>
+            <span className="hidden sm:inline text-text-muted/70 truncate">routs@routsgg • tmux • 2 panes</span>
+            <span className="text-accent font-bold shrink-0">contact</span>
           </div>
-          <p className="text-center font-mono text-xs leading-relaxed text-text-muted">
-            Scannez pour <span className="text-text font-medium">voir mes contacts</span>
-          </p>
         </div>
       </div>
     </section>
