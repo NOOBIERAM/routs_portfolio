@@ -10,7 +10,7 @@ export const experiences: ExperienceItem[] = [
     stack: ["React", "Tailwind CSS", "ExpressJs", "Socket.IO", "PostgreSQL", "Sequelize"],
   },
   {
-    company: "Computer Store Fianarantsoa",
+    company: "Computer Store Antananarivo",
     role: "Stagiaire développeur FullStack",
     period: "Sep – Nov 2023",
     description:

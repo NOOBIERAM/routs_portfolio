@@ -91,7 +91,7 @@ export function Hero() {
               }}
             />
             <div className="absolute -bottom-2 -right-2 rounded-full border border-border bg-bg-second px-3 py-1.5 font-mono text-xs text-text-muted shadow">
-              <span className="text-accent">●</span> Fianarantsoa, MG
+              <span className="text-accent">●</span> Antananarivo, MG
             </div>
           </div>
         </div>

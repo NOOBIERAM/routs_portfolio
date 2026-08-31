@@ -54,7 +54,7 @@ export function Experience() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 font-mono text-xs text-text-muted/60">ENI Fianarantsoa — Génie Logiciel et Bases de Données</p>
+            <p className="mt-6 font-mono text-xs text-text-muted/60">ENI Antananarivo — Génie Logiciel et Bases de Données</p>
           </div>
         </div>
       </div>

@@ -120,7 +120,7 @@ export function Contact() {
                     <p className="flex items-center gap-2">
                       <MapPin size={12} className="shrink-0 text-accent" />
                       <span className="font-bold text-accent">Lieu:</span>
-                      <span className="text-text">Fianarantsoa, MG</span>
+                      <span className="text-text">Antananarivo, MG</span>
                     </p>
                   </div>
                 </div>
