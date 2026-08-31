@@ -138,20 +138,35 @@ export function Contact() {
                 <span>RoutGG</span>
                 <span className="text-text-muted/50">— scan</span>
               </div>
-              <div className="bg-white p-3 rounded-xl shadow-md">
+              <div className="relative">
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -top-1.5 -left-1.5 h-6 w-6 rounded-tl-lg border-l-2 border-t-2 border-accent"
+                />
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -top-1.5 -right-1.5 h-6 w-6 rounded-tr-lg border-r-2 border-t-2 border-accent"
+                />
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -bottom-1.5 -left-1.5 h-6 w-6 rounded-bl-lg border-b-2 border-l-2 border-accent"
+                />
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -bottom-1.5 -right-1.5 h-6 w-6 rounded-br-lg border-b-2 border-r-2 border-accent"
+                />
                 <img
                   src="/RoutGG.png"
                   alt="QR code RoutGG — scannez pour voir mes contacts"
                   width={180}
                   height={180}
                   loading="lazy"
-                  className="h-[180px] w-[180px] object-contain"
+                  className="h-42 w-42 object-contain"
                 />
               </div>
               <p className="text-center font-mono text-xs leading-relaxed text-text-muted">
                 Scannez pour <span className="text-text font-medium">voir mes contacts</span>
               </p>
-              <p className="font-mono text-[10px] leading-none text-text-muted/60">pane 1 • 180×180</p>
             </div>
           </div>
 
