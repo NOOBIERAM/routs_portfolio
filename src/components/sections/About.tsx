@@ -49,22 +49,32 @@ export function About() {
     >
       <SectionTitle>WHOAMI</SectionTitle>
 
-      {/* tmux frame — bg #193549 en sombre */}
+      {/* tmux frame — même thème que Contact */}
       <div className="mt-8 overflow-hidden rounded-lg border border-accent/20 bg-terminal shadow-xl shadow-black/20">
-        {/* tmux top — window tabs */}
-        <div className="flex items-center gap-1 border-b border-accent/20 bg-bg-second px-2 py-1.5 font-mono text-xs overflow-x-auto">
-          <span className="hidden sm:inline text-text-muted mr-2">[routsgg]</span>
-          <span className="rounded bg-accent px-2 py-0.5 font-bold text-black whitespace-nowrap">0:whoami*</span>
-          <span className="px-2 py-0.5 text-text-muted whitespace-nowrap">1:experience</span>
-          <span className="px-2 py-0.5 text-text-muted whitespace-nowrap">2:skills</span>
-          <span className="px-2 py-0.5 text-text-muted whitespace-nowrap hidden sm:inline">3:projects</span>
-          <span className="ml-auto hidden md:inline text-text-muted/60 whitespace-nowrap">tmux 3.4</span>
-        </div>
+        <div className="border-2 border-accent/30 m-1 sm:m-2 rounded-md overflow-hidden bg-terminal">
+          {/* tmux header — avec 3 btn fermer / réduire / agrandir */}
+          <div className="flex items-center justify-between border-b border-accent/20 bg-accent/10 px-3 py-1.5 font-mono text-xs">
+            <span className="flex items-center gap-2 min-w-0">
+              <span className="hidden sm:flex items-center gap-1.5 shrink-0" aria-hidden="true">
+                <span className="h-2.5 w-2.5 rounded-full bg-red-400/90 border border-black/10" />
+                <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/90 border border-black/10" />
+                <span className="h-2.5 w-2.5 rounded-full bg-green-400/90 border border-black/10" />
+              </span>
+              <span className="inline-block h-2 w-2 rounded-full bg-accent animate-pulse shrink-0 sm:hidden" aria-hidden="true" />
+              <span className="text-accent font-bold truncate">tmux</span>
+              <span className="text-text-muted hidden sm:inline truncate">— routs@routsgg: ~/whoami</span>
+              <span className="hidden lg:inline-flex items-center gap-1 ml-2 text-[10px] leading-none">
+                <span className="rounded bg-accent px-1.5 py-0.5 font-bold text-terminal">0:whoami*</span>
+                <span className="rounded bg-accent/15 px-1.5 py-0.5 text-text-muted border border-accent/20">1:experience</span>
+                <span className="hidden xl:inline rounded bg-accent/15 px-1.5 py-0.5 text-text-muted border border-accent/20">2:skills</span>
+                <span className="hidden xl:inline rounded bg-accent/15 px-1.5 py-0.5 text-text-muted border border-accent/20">3:projects</span>
+              </span>
+            </span>
+            <span className="text-text-muted/60 hidden sm:inline shrink-0">tmux 3.4 • utf-8</span>
+          </div>
 
-        {/* active pane — whoami */}
-        <div className="border-2 border-accent/40 m-1 sm:m-2 rounded-md overflow-hidden bg-terminal">
-          {/* pane header */}
-          <div className="flex items-center justify-between border-b border-accent/30 bg-accent/10 px-3 py-1.5 font-mono text-xs">
+          {/* pane header — whoami */}
+          <div className="flex items-center justify-between border-b border-accent/20 bg-terminal px-3 py-1.5 font-mono text-xs">
             <span className="flex items-center gap-2">
               <span className="inline-block h-2 w-2 rounded-full bg-accent animate-pulse" aria-hidden="true" />
               <span className="text-accent font-bold">pane 0</span>
@@ -152,21 +162,22 @@ export function About() {
               </div>
             </div>
           </div>
-        </div>
 
-        {/* tmux bottom status line */}
-        <div className="flex flex-wrap items-center justify-between gap-2 bg-accent px-2.5 py-1.5 font-mono text-xs font-bold text-black">
-          <span className="flex items-center gap-1.5 whitespace-nowrap">
-            <span className="rounded bg-black px-1.5 py-0.5 text-accent">[0]</span>
-            <span className="hidden sm:inline">routs@routsgg</span>
-            <span className="opacity-60 hidden sm:inline">•</span>
-            <span className="opacity-80">Fianarantsoa</span>
-          </span>
-          <span className="flex items-center gap-2 whitespace-nowrap">
-            <span className="hidden md:inline opacity-70">utf-8</span>
-            <span className="rounded bg-black/15 px-1.5 py-0.5">100%</span>
-            <span suppressHydrationWarning>{time}</span>
-          </span>
+          {/* tmux status bar — même que Contact */}
+          <div className="flex items-center justify-between gap-2 border-t border-accent/20 bg-accent/10 px-2 sm:px-3 py-1 font-mono text-[10px] sm:text-xs leading-none">
+            <span className="flex items-center gap-1 sm:gap-1.5 min-w-0">
+              <span className="hidden sm:inline text-text-muted">[0]</span>
+              <span className="rounded-sm bg-accent px-1.5 py-1 font-bold text-terminal">0:whoami*</span>
+              <span className="rounded-sm border border-accent/20 bg-terminal px-1.5 py-1 text-text-muted hidden sm:inline">1:experience</span>
+              <span className="rounded-sm border border-accent/20 bg-terminal px-1.5 py-1 text-text-muted hidden lg:inline">2:skills</span>
+            </span>
+            <span className="hidden sm:inline text-text-muted/70 truncate">routs@routsgg • tmux • Fianarantsoa</span>
+            <span className="flex items-center gap-2 shrink-0">
+              <span className="hidden md:inline text-text-muted/60">utf-8</span>
+              <span className="rounded bg-accent px-1.5 py-0.5 font-bold text-terminal">100%</span>
+              <span suppressHydrationWarning className="text-text-muted">{time}</span>
+            </span>
+          </div>
         </div>
       </div>
     </section>
