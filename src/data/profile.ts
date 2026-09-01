@@ -3,10 +3,10 @@ import type { Profile } from "../types";
 export const profile: Profile = {
   fullName: "Rotsiniaina RAMANANTSOA",
   aliases: ["Rotsi", "RoutsGG", "NOOBIERAM"],
-  title: "Développeur Fullstack — #WEB | MOBILE",
+  title: "Développeur d'application — #WEB | MOBILE",
   greeting: "Bonjour!!",
   nameShort: "Rotsi",
-  slogan: "Je crée des applications modernes et résous des problèmes complexes avec un code propre et efficace.",
+  slogan: "De l'archhitecture à l'interface ",
   email: "rotsinainaggt@gmail.com",
   github: "https://github.com/NOOBIERAM",
   linkedin: "https://www.linkedin.com/in/noobieram",
