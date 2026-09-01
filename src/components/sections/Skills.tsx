@@ -189,29 +189,29 @@ export function Skills() {
         <div
           role="group"
           aria-label="Mode d'affichage"
-          className="inline-flex items-center rounded-full border border-border bg-bg-second p-1"
+          className="inline-flex items-center rounded-lg border border-border bg-bg-second p-1"
         >
           <button
             type="button"
             aria-pressed={view === "tree"}
             onClick={() => setView("tree")}
-            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors ${view === "tree"
+            className={`inline-flex items-center gap-1.5 rounded-lg px-3.5 py-1.5 text-xs font-medium transition-colors ${view === "tree"
                 ? "bg-accent text-white shadow-sm"
                 : "text-text-muted hover:text-text"
               }`}
           >
-            <LayoutPanelTop size={14} aria-hidden className="rotate-x-180"/> Tree
+            <LayoutPanelTop size={14} aria-hidden className="rotate-x-180"/>
           </button>
           <button
             type="button"
             aria-pressed={view === "list"}
             onClick={() => setView("list")}
-            className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors ${view === "list"
+            className={`inline-flex items-center gap-1.5 rounded-lg px-3.5 py-1.5 text-xs font-medium transition-colors ${view === "list"
                 ? "bg-accent text-white shadow-sm"
                 : "text-text-muted hover:text-text"
               }`}
           >
-            <List size={14} aria-hidden /> Liste
+            <List size={14} aria-hidden />
           </button>
         </div>
       </div>
