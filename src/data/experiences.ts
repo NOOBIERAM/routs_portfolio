@@ -7,7 +7,7 @@ export const experiences: ExperienceItem[] = [
     period: "Août – Nov 2026",
     description:
       "Conception et développement de TALENTA, service intelligent de gestion du recrutement de l'offre à l'embauche. Mise en place de la chaîne candidatures : création d'offres assistée par IA, réception et analyse automatisée des CV, présélection justifiée, puis suivi des entretiens, décisions et génération des documents d'embauche. Développement d'une API multi-entités sécurisée, intégrée aux plateformes du partenariat, avec validation humaine à chaque étape.",
-    stack: ["Python", "FastAPI", "Gemini API", "LangChain", "PostgreSQL", "pgvector", "Docker", "Gmail API", "Google Calendar API", "Microservice"],
+    stack: ["Python", "FastAPI", "Gemini API", "PostgreSQL", "pgvector", "Docker", "Microservice", "pytest", "ruff", "coverage"],
     status: "current",
   },
   {
