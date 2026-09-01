@@ -10,8 +10,6 @@ import {
   CircuitBoard,
   Microchip,
   GitBranch,
-  Layers,
-  LayoutPanelTop,
   List,
 } from "lucide-react";
 import { SectionTitle } from "../ui/SectionTitle";
@@ -43,6 +41,26 @@ function countNodes(nodes: SkillNode[]): number {
 function isMonoLogo(url?: string) {
   if (!url) return false;
   return url.includes("/ios") || url.includes("glyph-neue") || url.includes("prisma-orm") || url.includes("sequelize");
+}
+
+function TechIcon({ logo, size = "h-4 w-4" }: { logo?: string; size?: string }) {
+  if (!logo) return null;
+  return (
+    <span className={`${size} shrink-0 flex items-center justify-center`}>
+      <img
+        src={logo}
+        alt=""
+        width={16}
+        height={16}
+        loading="lazy"
+        className={`h-full w-full object-contain ${isMonoLogo(logo) ? "invert brightness-0 [html.light_&]:invert-0 [html.light_&]:brightness-100" : ""}`}
+        onError={(e) => {
+          const wrap = (e.target as HTMLImageElement).parentElement;
+          if (wrap) wrap.style.display = "none";
+        }}
+      />
+    </span>
+  );
 }
 
 function SkillPill({ node, small }: { node: SkillNode; small?: boolean }) {
@@ -164,30 +182,27 @@ export function Skills() {
         <div
           role="group"
           aria-label="Mode d'affichage"
-          className="inline-flex items-center rounded-lg border border-border bg-bg-second p-1"
+          className="inline-flex items-center gap-0.5 rounded-lg border border-border bg-bg-second p-1 font-mono text-xs"
         >
-          <button
-            type="button"
-            aria-pressed={view === "tree"}
-            onClick={() => setView("tree")}
-            className={`inline-flex items-center gap-1.5 rounded-lg px-3.5 py-1.5 text-xs font-medium transition-colors ${view === "tree"
-              ? "bg-accent text-white shadow-sm"
-              : "text-text-muted hover:text-text"
+          {([
+            { key: "tree", label: "tree", Icon: GitBranch },
+            { key: "list", label: "list", Icon: List },
+          ] as const).map(({ key, label, Icon }) => (
+            <button
+              key={key}
+              type="button"
+              aria-pressed={view === key}
+              onClick={() => setView(key)}
+              className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 transition-colors ${
+                view === key
+                  ? "bg-accent text-white"
+                  : "text-text-muted hover:bg-bg hover:text-text"
               }`}
-          >
-            <LayoutPanelTop size={14} aria-hidden className="rotate-x-180" />
-          </button>
-          <button
-            type="button"
-            aria-pressed={view === "list"}
-            onClick={() => setView("list")}
-            className={`inline-flex items-center gap-1.5 rounded-lg px-3.5 py-1.5 text-xs font-medium transition-colors ${view === "list"
-              ? "bg-accent text-white shadow-sm"
-              : "text-text-muted hover:text-text"
-              }`}
-          >
-            <List size={14} aria-hidden />
-          </button>
+            >
+              <Icon size={13} aria-hidden />
+              {label}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -255,40 +270,28 @@ export function Skills() {
             })}
           </div>
         </>
-      ) : (  //List
-        <div className="mt-8 grid gap-4 sm:gap-6">
+      ) : (  //List — feuille de specs : catégorie à gauche, technos alignées à droite
+        <div className="mt-8 border-t border-border">
           {skills.map((cat) => {
             const Icon = iconMap[cat.icon] ?? Code2;
             return (
-              <div key={cat.title} className="rounded-xl border border-border bg-bg-second p-5 sm:p-6">
+              <div
+                key={cat.title}
+                className="grid gap-2 border-b border-border py-5 sm:grid-cols-[200px_1fr] sm:gap-8 sm:py-6"
+              >
                 <div className="flex items-center gap-2">
-                  <Icon size={18} className="text-accent" />
-                  <h3 className="text-sm font-semibold text-text">{cat.title}</h3>
+                  <Icon size={15} className="shrink-0 text-accent" />
+                  <h3 className="text-xs font-medium uppercase tracking-wider text-text">
+                    {cat.title}
+                  </h3>
                 </div>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-x-10 gap-y-2.5">
                   {cat.items.map((item) => (
                     <span
                       key={item.name}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg px-2.5 py-1 text-xs font-medium text-text-muted hover:border-accent/20 transition-colors"
+                      className="group inline-flex items-center gap-1.5 text-sm text-text-muted transition-colors hover:text-text"
                     >
-                      {item.logo && (
-                        <span className="h-6 w-6 shrink-0 flex items-center justify-center">
-                          <img
-                            src={item.logo}
-                            alt=""
-                            width={16}
-                            height={16}
-                            loading="lazy"
-                            className={`h-4 w-4 object-contain ${isMonoLogo(item.logo) ? "invert brightness-0 [html.light_&]:invert-0 [html.light_&]:brightness-100" : ""}`}
-                            onError={(e) => {
-                              const img = e.target as HTMLImageElement;
-                              img.style.display = "none";
-                              const wrap = img.parentElement as HTMLElement | null;
-                              if (wrap) wrap.style.display = "none";
-                            }}
-                          />
-                        </span>
-                      )}
+                      <TechIcon logo={item.logo} />
                       {item.name}
                     </span>
                   ))}
