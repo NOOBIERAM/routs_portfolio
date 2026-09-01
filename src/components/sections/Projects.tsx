@@ -15,9 +15,8 @@ export function Projects() {
     <section
       id="projets"
       ref={ref as React.RefObject<HTMLElement>}
-      className={`mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 transition-all duration-700 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-      }`}
+      className={`mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+        }`}
     >
       <SectionTitle>PROJETS</SectionTitle>
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
@@ -27,31 +26,25 @@ export function Projects() {
             className="group flex flex-col overflow-hidden rounded-xl border border-border bg-bg-second hover:border-accent/30 hover:-translate-y-1 transition-all duration-200"
           >
             <div className="relative aspect-[16/10] overflow-hidden bg-bg">
-              <button
-                onClick={() => setSelected(p)}
-                className="absolute inset-0 h-full w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
-                aria-label={`Aperçu du projet ${p.title}`}
-              >
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  width={600}
-                  height={375}
-                  loading="lazy"
-                  className="h-full w-full object-cover"
-                  onError={(e) => {
-                    const img = e.target as HTMLImageElement;
-                    img.style.display = "none";
-                    const parent = img.parentElement;
-                    if (parent && !parent.querySelector(".fallback")) {
-                      const div = document.createElement("div");
-                      div.className = "fallback flex h-full w-full items-center justify-center font-mono text-xs text-text-muted bg-bg";
-                      div.textContent = p.title;
-                      parent.appendChild(div);
-                    }
-                  }}
-                />
-              </button>
+              <img
+                src={p.image}
+                alt={p.title}
+                width={600}
+                height={375}
+                loading="lazy"
+                className="h-full w-full object-cover"
+                onError={(e) => {
+                  const img = e.target as HTMLImageElement;
+                  img.style.display = "none";
+                  const parent = img.parentElement;
+                  if (parent && !parent.querySelector(".fallback")) {
+                    const div = document.createElement("div");
+                    div.className = "fallback flex h-full w-full items-center justify-center font-mono text-xs text-text-muted bg-bg";
+                    div.textContent = p.title;
+                    parent.appendChild(div);
+                  }
+                }}
+              />
               {(p.demo || p.github) && (
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center gap-2 bg-black/50 opacity-0 backdrop-blur-[2px] transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100">
                   <div className="pointer-events-auto flex gap-2">
@@ -97,19 +90,6 @@ export function Projects() {
           </article>
         ))}
       </div>
-
-      <Modal open={!!selected} onClose={() => setSelected(null)} title={selected?.title ?? ""} fullscreen>
-        {selected && (
-          <div className="flex h-screen w-screen items-center justify-center p-4">
-            <img
-              src={selected.image}
-              alt={selected.title}
-              className="max-h-screen max-w-screen h-auto w-auto object-contain"
-              loading="lazy"
-            />
-          </div>
-        )}
-      </Modal>
     </section>
   );
 }

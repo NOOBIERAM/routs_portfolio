@@ -95,7 +95,7 @@ export const skills: SkillCategory[] = [
     icon: "CircuitBoard",
     items: [
       { name: "Arduino", logo: "https://img.icons8.com/color/48/arduino.png" },
-      { name: "ESP32", logo: "https://img.icons8.com/color/48/microchip.png" },
+      { name: "ESP32", logo: "https://img.icons8.com/color/48/integrated-circuit.png" },
     ],
   },
 ];
@@ -114,16 +114,12 @@ export const skillTree: SkillNode[] = [
       { name: "React", logo: "https://img.icons8.com/color/48/react-native.png" },
       { name: "Vue.js", logo: "https://img.icons8.com/color/48/vue-js.png" },
       { name: "React Native", logo: "https://img.icons8.com/color/48/react-native.png" },
-      {
-        name: "Node.js",
-        logo: "https://img.icons8.com/color/48/nodejs.png",
-        children: [
-          { name: "Express",logo: "https://img.icons8.com/ios/50/express-js.png"},
-          { name: "NestJS", logo: "/images/logos/nest.svg" },
-          { name: "Prisma", logo: "https://img.icons8.com/ios/50/prisma-orm.png" },
-          { name: "Sequelize", logo: "https://raw.githubusercontent.com/sequelize/sequelize/60b75189751e534b6853a56513df3453feb045b1/logo.svg" },
-        ],
-      },
+      { name: "Node.js", logo: "https://img.icons8.com/color/48/nodejs.png" },
+      { name: "Express", logo: "https://img.icons8.com/ios/50/express-js.png" },
+      { name: "NestJS", logo: "/images/logos/nest.svg" },
+      { name: "Prisma", logo: "https://img.icons8.com/ios/50/prisma-orm.png" },
+      { name: "Sequelize", logo: "https://raw.githubusercontent.com/sequelize/sequelize/60b75189751e534b6853a56513df3453feb045b1/logo.svg" },
+
     ],
   },
   {
@@ -172,18 +168,18 @@ export const skillTree: SkillNode[] = [
       { name: "Supabase", logo: "/images/logos/supabase.webp" },
     ],
   },
-  {
-    name: "Bash",
-    logo: "https://images.icon-icons.com/2699/PNG/512/gnu_bash_official_logo_icon_169099.png",
-    icon: "Cpu",
-  },
+  // {
+  //   name: "Bash",
+  //   logo: "https://images.icon-icons.com/2699/PNG/512/gnu_bash_official_logo_icon_169099.png",
+  //   icon: "Cpu",
+  // },
   {
     name: "IoT",
-    logo: "https://img.icons8.com/color/48/microchip.png",
+    logo: "https://img.icons8.com/color/48/processor.png",
     icon: "CircuitBoard",
     children: [
       { name: "Arduino", logo: "https://img.icons8.com/color/48/arduino.png" },
-      { name: "ESP32", logo: "https://img.icons8.com/color/48/microchip.png" },
+      { name: "ESP32", logo: "https://img.icons8.com/color/48/integrated-circuit.png" },
     ],
   },
 ];
