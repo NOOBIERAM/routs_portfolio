@@ -125,15 +125,24 @@ export function About() {
                 <span className="ml-1 inline-block h-[14px] w-[7px] translate-y-px bg-accent animate-[blink_700ms_steps(1)_infinite]" aria-hidden="true" />
               </div>
             </div>
-            <div className="space-y-4 text-sm leading-relaxed text-text-muted max-w-3xl font-sans">
-              <p className="text-text">
-                Je suis <span className="font-semibold text-accent">Rotsiniaina RAMANANTSOA</span>, alias <span className="font-mono text-text border border-border rounded px-1">Rotsi</span> — développeur fullstack web &amp; mobile basé à Antananarivo, Madagascar. Passionné par le code propre, la POO et le mobile-first, je conçois des applications modernes de l&apos;architecture à l&apos;interface, avec une exigence forte sur la performance et l&apos;expérience utilisateur.
+            <div className="max-w-2xl space-y-4 font-sans text-sm leading-relaxed text-text-muted">
+              <p className="text-base leading-relaxed text-text">
+                <span className="font-semibold text-accent">Rotsiniaina RAMANANTSOA</span> —
+                développeur fullstack web &amp; mobile, basé à Fianarantsoa.
               </p>
               <p>
-                Diplômé de l&apos;ENI Antananarivo (Génie Logiciel et Bases de Données), j&apos;ai mené des projets allant d&apos;applications de gestion et de messagerie sécurisée à des systèmes embarqués <span className="text-text">ESP32 / HC-SR04</span> et des solveurs algorithmiques (CSP, OR-Tools). Mon approche : autonomie, rigueur, créativité et apprentissage continu.
+                J&apos;aime partir d&apos;une idée encore floue et la faire devenir un produit
+                qu&apos;on peut réellement utiliser — en soignant autant l&apos;architecture que
+                les détails de l&apos;interface.
               </p>
               <p>
-                Autonome, analytique et progressif, j&apos;aime résoudre des problèmes complexes et transformer une idée en produit fonctionnel — que ce soit en <span className="text-text">React, Vue, Node/NestJS, Spring Boot</span> ou <span className="text-text">React Native / Flutter</span>. Je recherche des missions où je peux apporter de la valeur rapidement et durablement.
+                Diplômé de l&apos;ENI Fianarantsoa (Génie Logiciel &amp; Bases de Données), je
+                travaille avec méthode et une attention constante à la performance et à
+                l&apos;expérience utilisateur.
+              </p>
+              <p className="text-text-muted/80">
+                Autonome et curieux, je cherche des missions où apporter de la valeur —
+                rapidement et durablement.
               </p>
             </div>
 
@@ -171,7 +180,7 @@ export function About() {
               <span className="rounded-sm border border-accent/20 bg-terminal px-1.5 py-1 text-text-muted hidden sm:inline">1:experience</span>
               <span className="rounded-sm border border-accent/20 bg-terminal px-1.5 py-1 text-text-muted hidden lg:inline">2:skills</span>
             </span>
-            <span className="hidden sm:inline text-text-muted/70 truncate">routs@routsgg • tmux • Antananarivo</span>
+            <span className="hidden sm:inline text-text-muted/70 truncate">routs@routsgg • tmux • </span>
             <span className="flex items-center gap-2 shrink-0">
               <span className="hidden md:inline text-text-muted/60">utf-8</span>
               <span className="rounded bg-accent px-1.5 py-0.5 font-bold text-terminal">100%</span>
