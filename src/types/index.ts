@@ -27,6 +27,11 @@ export type EducationItem = {
   school: string;
   specialty: string;
   status: "current" | "done";
+  diplome?: null | {
+    name: string;
+    honors: string;
+    period: string;
+  };
 };
 
 export type ExperienceItem = {
@@ -35,6 +40,7 @@ export type ExperienceItem = {
   period: string;
   description: string;
   stack: string[];
+  status: "current" | "done";
 };
 
 export type SkillCategory = {

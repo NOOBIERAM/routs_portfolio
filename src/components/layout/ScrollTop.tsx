@@ -24,17 +24,20 @@ export function ScrollTop() {
         href={profile.cv}
         download
         aria-label="Télécharger le CV"
-        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-bg-second text-text-muted hover:text-accent hover:border-accent/30 shadow-lg transition-all focus-visible:ring-2 focus-visible:ring-accent"
+        className="group/btn inline-flex h-10 items-center justify-center gap-0 overflow-hidden rounded-lg border border-border bg-bg-second px-2.5 text-text-muted hover:text-accent hover:border-accent/30 shadow-lg transition-all focus-visible:ring-2 focus-visible:ring-accent"
       >
-        <Download size={16} />
+        <span className="max-w-[140px] opacity-100 whitespace-nowrap overflow-hidden transition-all duration-300 text-xs font-medium lg:max-w-0 lg:opacity-0 lg:ml-0 lg:group-hover/btn:max-w-[140px] lg:group-hover/btn:opacity-100 lg:group-hover/btn:mr-1.5 lg:group-focus-visible/btn:max-w-[140px] lg:group-focus-visible/btn:opacity-100 lg:group-focus-visible/btn:ml-1.5">
+          Télécharger CV
+        </span>
+        <Download size={16} className="shrink-0" />
       </a>
       <button
         onClick={goTop}
         onMouseEnter={goTop}
         aria-label="Remonter en haut"
-        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-bg-second text-text-muted hover:text-accent hover:border-accent/30 shadow-lg transition-all focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-bg-second text-text-muted hover:text-accent hover:border-accent/30 shadow-lg transition-all focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
       >
-        <Rocket size={16} />
+        <Rocket size={16} className="rotate-[-45deg]"/>
       </button>
     </div>
   );

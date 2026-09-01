@@ -3,15 +3,15 @@ import { experiences } from "../../data/experiences";
 import { educationData } from "../../data/education";
 import { Badge } from "../ui/Badge";
 import { useReveal } from "../../hooks/useReveal";
+import { GraduationCap } from "lucide-react";
 
 export function Experience() {
   const { ref, visible } = useReveal();
   return (
     <section
       ref={ref as React.RefObject<HTMLElement>}
-      className={`mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 transition-all duration-700 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-      }`}
+      className={`mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+        }`}
     >
       <div className="grid gap-10 lg:gap-12 lg:grid-cols-[1.65fr_0.9fr] items-start">
         {/* Colonne gauche : Expérience */}
@@ -25,7 +25,7 @@ export function Experience() {
                   <h3 className="text-base font-semibold text-text">{exp.company}</h3>
                   <span className="text-sm text-text-muted">— {exp.role}</span>
                 </div>
-                <p className="mt-1 font-mono text-xs text-accent">{exp.period}</p>
+                <p className="mt-1 font-mono text-xs text-accent">{exp.period} {exp.status === "current" ? "— en cours" : ""}</p>
                 <p className="mt-3 text-sm leading-relaxed text-text-muted">{exp.description}</p>
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {exp.stack.map((s) => (
@@ -51,10 +51,16 @@ export function Experience() {
                   <h3 className="mt-1 text-sm font-semibold text-text">{ed.degree}</h3>
                   <p className="text-xs leading-relaxed text-text-muted mt-1">{ed.school}</p>
                   <p className="text-xs text-text-muted">{ed.specialty}</p>
+                  {ed.diplome && (
+                    <p className="flex items-center gap-1 border-l-3 border-accent mt-4 p-1 text-xs bg-accent/10 rounded-sm">
+                      <GraduationCap className=" inline-block mr-1 h-6 w-6" />
+                      {ed.diplome.period} : {ed.diplome.name}, {ed.diplome.honors}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
-            <p className="mt-6 font-mono text-xs text-text-muted/60">ENI Antananarivo — Génie Logiciel et Bases de Données</p>
+            <p className="mt-6 font-mono text-xs text-text-muted/60">ENI Fianarantsoa — Génie Logiciel et Bases de Données</p>
           </div>
         </div>
       </div>

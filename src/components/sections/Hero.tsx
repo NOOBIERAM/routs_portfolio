@@ -78,14 +78,14 @@ export function Hero() {
 
         <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-accent/10 blur-2xl" aria-hidden="true" />
+            <div className="absolute inset-0 rounded-full bg-accent/20 blur-2xl " aria-hidden="true" />
             <img
               src="/images/routs.webp"
               alt="Portrait de Rotsiniaina RAMANANTSOA"
               width={320}
               height={320}
               loading="eager"
-              className="relative h-[220px] w-[220px] sm:h-[280px] sm:w-[280px] lg:h-[320px] lg:w-[320px] rounded-full object-cover grayscale border-2 border-accent/40 bg-bg-second"
+              className="h-[220px] w-[220px] sm:h-[280px] sm:w-[280px] lg:h-[320px] lg:w-[320px] rounded-full object-cover grayscale border-2 border-accent/40 bg-bg-second"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";
               }}
