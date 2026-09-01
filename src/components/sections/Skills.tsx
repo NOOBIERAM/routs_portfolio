@@ -40,23 +40,36 @@ function countNodes(nodes: SkillNode[]): number {
   return c;
 }
 
+function isMonoLogo(url?: string) {
+  if (!url) return false;
+  return url.includes("/ios") || url.includes("glyph-neue") || url.includes("prisma-orm") || url.includes("sequelize");
+}
+
 function SkillPill({ node, small }: { node: SkillNode; small?: boolean }) {
+  const mono = isMonoLogo(node.logo);
   return (
     <span
       className={`inline-flex items-center gap-1.5 rounded-full border bg-bg px-2.5 py-1 text-xs font-medium text-text-muted transition-colors hover:border-accent/30 hover:text-text ${small ? "text-[11px] px-2 py-0.5" : ""}`}
     >
       {node.logo ? (
-        <img
-          src={node.logo}
-          alt=""
-          width={small ? 14 : 16}
-          height={small ? 14 : 16}
-          loading="lazy"
-          className={`${small ? "h-3.5 w-3.5" : "h-4 w-4"} object-contain`}
-          onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
-        />
+        <span className={`${small ? "h-5 w-5" : "h-6 w-6"} shrink-0 flex items-center justify-center`}>
+          <img
+            src={node.logo}
+            alt=""
+            width={small ? 14 : 16}
+            height={small ? 14 : 16}
+            loading="lazy"
+            className={`${small ? "h-3.5 w-3.5" : "h-4 w-4"} object-contain ${mono ? "invert brightness-0 [html.light_&]:invert-0 [html.light_&]:brightness-100" : ""}`}
+            onError={(e) => {
+              const img = e.target as HTMLImageElement;
+              img.style.display = "none";
+              const wrap = img.parentElement as HTMLElement | null;
+              if (wrap) wrap.style.display = "none";
+            }}
+          />
+        </span>
       ) : (
-        <span className={`${small ? "h-3.5 w-3.5" : "h-4 w-4"} rounded-full bg-accent/15 border border-accent/20 inline-block`} aria-hidden />
+        <span className={`${small ? "h-5 w-5" : "h-6 w-6"} shrink-0 flex items-center justify-center`} aria-hidden />
       )}
       {node.name}
     </span>
@@ -72,7 +85,7 @@ function BranchCard({ node }: { node: SkillNode }) {
     <div className="group relative flex flex-col rounded-xl border border-border bg-bg-second p-5 sm:p-6 transition-all duration-300 hover:border-border/80 hover:shadow-md">
       <div className="flex items-start gap-3">
         <div className="flex items-center gap-3 min-w-0">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-border bg-bg overflow-hidden">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden">
             {node.name === "HTML & CSS" ? (
               <span className="flex items-center -space-x-2">
                 <img
@@ -101,7 +114,7 @@ function BranchCard({ node }: { node: SkillNode }) {
                 width={28}
                 height={28}
                 loading="lazy"
-                className="h-7 w-7 object-contain"
+                className={`h-7 w-7 object-contain ${isMonoLogo(node.logo) ? "invert brightness-0 [html.light_&]:invert-0 [html.light_&]:brightness-100" : ""}`}
                 onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
               />
             ) : (
@@ -228,14 +241,14 @@ export function Skills() {
 
           <div className="mt-8 rounded-xl border border-border bg-bg-second p-5 sm:p-6">
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-bg">
+              <div className="flex h-8 w-8 items-center justify-center">
                 <Layers size={16} className="text-text-muted" />
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-text">Outils</h3>
               </div>
             </div>
-            <div className="mx-auto mt-5 grid w-fit gap-6 place-content-center sm:gap-6 sm:grid-cols-3">
+            <div className="mx-auto mt-5 grid gap-6 place-content-center sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
               {freeSkills.map((group) => {
                 const Icon = iconMap[group.icon] ?? Settings2;
                 return (
@@ -251,15 +264,22 @@ export function Skills() {
                           className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg px-2.5 py-1 text-xs font-medium text-text-muted hover:border-accent/20 transition-colors"
                         >
                           {item.logo && (
-                            <img
-                              src={item.logo}
-                              alt=""
-                              width={14}
-                              height={14}
-                              loading="lazy"
-                              className="h-3.5 w-3.5 object-contain"
-                              onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
-                            />
+                            <span className="h-5 w-5 shrink-0 flex items-center justify-center">
+                              <img
+                                src={item.logo}
+                                alt=""
+                                width={14}
+                                height={14}
+                                loading="lazy"
+                                className={`h-3.5 w-3.5 object-contain ${isMonoLogo(item.logo) ? "invert brightness-0 [html.light_&]:invert-0 [html.light_&]:brightness-100" : ""}`}
+                                onError={(e) => {
+                                  const img = e.target as HTMLImageElement;
+                                  img.style.display = "none";
+                                  const wrap = img.parentElement as HTMLElement | null;
+                                  if (wrap) wrap.style.display = "none";
+                                }}
+                              />
+                            </span>
                           )}
                           {item.name}
                         </span>
@@ -288,15 +308,22 @@ export function Skills() {
                       className="inline-flex items-center gap-1.5 rounded-full border border-border bg-bg px-2.5 py-1 text-xs font-medium text-text-muted hover:border-accent/20 transition-colors"
                     >
                       {item.logo && (
-                        <img
-                          src={item.logo}
-                          alt=""
-                          width={16}
-                          height={16}
-                          loading="lazy"
-                          className="h-4 w-4 object-contain"
-                          onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
-                        />
+                        <span className="h-6 w-6 shrink-0 flex items-center justify-center">
+                          <img
+                            src={item.logo}
+                            alt=""
+                            width={16}
+                            height={16}
+                            loading="lazy"
+                            className={`h-4 w-4 object-contain ${isMonoLogo(item.logo) ? "invert brightness-0 [html.light_&]:invert-0 [html.light_&]:brightness-100" : ""}`}
+                            onError={(e) => {
+                              const img = e.target as HTMLImageElement;
+                              img.style.display = "none";
+                              const wrap = img.parentElement as HTMLElement | null;
+                              if (wrap) wrap.style.display = "none";
+                            }}
+                          />
+                        </span>
                       )}
                       {item.name}
                     </span>

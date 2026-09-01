@@ -7,7 +7,7 @@ export const profile: Profile = {
   greeting: "Bonjour!!",
   nameShort: "Rotsi",
   slogan: "Je crée des applications modernes et résous des problèmes complexes avec un code propre et efficace.",
-  email: "rotsiniainaramanantsoagg@gmail.com",
+  email: "rotsinainaggt@gmail.com",
   github: "https://github.com/NOOBIERAM",
   linkedin: "https://www.linkedin.com/in/noobieram",
   whatsapp: "https://wa.me/261347700626",

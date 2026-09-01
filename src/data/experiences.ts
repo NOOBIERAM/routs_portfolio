@@ -2,12 +2,12 @@ import type { ExperienceItem } from "../types";
 
 export const experiences: ExperienceItem[] = [
   {
-    company: "E-Prest",
-    role: "Stagiaire développeur FullStack",
-    period: "Juin – Nov 2026",
+    company: "E-PREST",
+    role: "Stagiaire Backend & IA ",
+    period: "Août – Nov 2026",
     description:
-      "Développement d'une application de tri&scoring de CV automatique par IA. Intégration de modèles Gemini pour analyser et classer les candidats.",
-    stack: ["React", "Tailwind CSS", "Python", "FastAPI", "PostgreSQL", "Redis", "Alembic","Microservices", "Gemini API"],
+      "Conception et développement de TALENTA, service intelligent de gestion du recrutement de l'offre à l'embauche. Mise en place de la chaîne candidatures : création d'offres assistée par IA, réception et analyse automatisée des CV, présélection justifiée, puis suivi des entretiens, décisions et génération des documents d'embauche. Développement d'une API multi-entités sécurisée, intégrée aux plateformes du partenariat, avec validation humaine à chaque étape.",
+    stack: ["Python", "FastAPI", "Gemini API", "LangChain", "PostgreSQL", "pgvector", "Docker", "Gmail API", "Google Calendar API", "Microservice"],
     status: "current",
   },
   {

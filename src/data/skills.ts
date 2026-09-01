@@ -67,6 +67,9 @@ export const skills: SkillCategory[] = [
       { name: "Docker", logo: "https://img.icons8.com/color/48/docker.png" },
       { name: "CI/CD", logo: "https://img.icons8.com/color/48/deployment.png" },
       { name: "GitHub Actions", logo: "https://img.icons8.com/color/48/github--v1.png" },
+      { name: "Jest", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" },
+      { name: "Vitest", logo: "https://vitest.dev/logo.svg" },
+      { name: "pytest", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytest/pytest-original.svg" },
     ],
   },
   {
@@ -197,6 +200,15 @@ export const freeSkills: FreeSkillGroup[] = [
       { name: "Docker", logo: "https://img.icons8.com/color/48/docker.png" },
       { name: "CI/CD", logo: "https://img.icons8.com/color/48/deployment.png" },
       { name: "GitHub Actions", logo: "https://img.icons8.com/color/48/github--v1.png" },
+    ],
+  },
+  {
+    label: "Tests",
+    icon: "Workflow",
+    items: [
+      { name: "Jest", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" },
+      { name: "Vitest", logo: "https://vitest.dev/logo.svg" },
+      { name: "pytest", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytest/pytest-original.svg" },
     ],
   },
   {
