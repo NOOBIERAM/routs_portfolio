@@ -1,0 +1,1 @@
+import{t as e}from"./vendor-Bg9Hf8aG.js";var t=e();function n({children:e,id:n}){return(0,t.jsxs)(`h2`,{id:n,className:`font-mono text-[clamp(18px,3.2vw,26px)] font-bold tracking-tight text-text`,children:[(0,t.jsx)(`span`,{className:`text-accent`,children:`$`}),` `,(0,t.jsx)(`span`,{className:`text-text-muted`,children:`~/`}),e]})}export{n as t};
