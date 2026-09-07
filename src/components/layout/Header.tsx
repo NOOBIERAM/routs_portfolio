@@ -1,27 +1,32 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
-import { ThemeToggle } from "../ui/ThemeToggle";
 
 const NAV = [
   { id: "accueil", label: "Accueil" },
+  { id: "whoami", label: "Whoami" },
   { id: "parcours", label: "Parcours" },
+  { id: "skills", label: "Skills" },
   { id: "projets", label: "Projets" },
   { id: "contact", label: "Contact" },
 ];
 
-type Props = {
-  theme: "dark" | "light";
-  toggleTheme: () => void;
-};
-
-export function Header({ theme, toggleTheme }: Props) {
+export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const active = useScrollSpy(NAV.map((n) => n.id), 120);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    let ticking = false;
+    const update = () => {
+      setScrolled(window.scrollY > 20);
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -57,7 +62,7 @@ export function Header({ theme, toggleTheme }: Props) {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`rounded-full px-3.5 py-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-accent ${
+              className={`rounded-lg px-3.5 py-2 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-accent ${
                 active === item.id ? "bg-bg-second text-text border border-border" : "text-text-muted hover:text-text"
               }`}
             >
@@ -67,12 +72,11 @@ export function Header({ theme, toggleTheme }: Props) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle theme={theme} toggle={toggleTheme} />
           <button
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={open}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-bg-second text-text-muted hover:text-text md:hidden focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-bg-second text-text-muted hover:text-text md:hidden focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>

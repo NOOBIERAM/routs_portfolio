@@ -8,6 +8,7 @@ export function Experience() {
   const { ref, visible } = useReveal();
   return (
     <section
+      id="parcours"
       ref={ref as React.RefObject<HTMLElement>}
       className={`mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
         }`}
@@ -30,7 +31,7 @@ export function Experience() {
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                     <p className="font-mono text-xs text-accent">{exp.period}</p>
                     {current && (
-                      <span className="rounded-full bg-accent/10 px-1.5 py-0.5 font-mono text-[10px] font-medium text-accent">
+                      <span className="rounded-lg bg-accent/10 px-1.5 py-0.5 font-mono text-[10px] font-medium text-accent">
                         en cours
                       </span>
                     )}

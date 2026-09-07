@@ -38,7 +38,7 @@ export function Certifications() {
                 href={c.verifyUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full border border-border bg-bg px-4 py-2 text-xs font-medium text-text-muted hover:text-accent hover:border-accent/30 transition-colors focus-visible:ring-2 focus-visible:ring-accent"
+                className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-lg border border-border bg-bg px-4 py-2 text-xs font-medium text-text-muted hover:text-accent hover:border-accent/30 transition-colors focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <ExternalLink size={12} /> Vérifier le certificat
               </a>

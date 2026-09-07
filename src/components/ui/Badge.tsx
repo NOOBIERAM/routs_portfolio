@@ -5,7 +5,7 @@ type Props = {
 };
 
 export function Badge({ children, variant = "default", className = "" }: Props) {
-  const base = "inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium";
+  const base = "inline-flex items-center rounded-lg border px-2.5 py-1 text-xs font-medium";
   const variants = {
     default: "border-border bg-bg-second text-text-muted",
     accent: "border-accent/30 bg-accent/10 text-accent",

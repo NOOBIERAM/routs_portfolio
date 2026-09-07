@@ -33,13 +33,13 @@ export function Hero() {
             <a
               href={profile.cv}
               download
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent-light transition-colors focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg cursor-pointer"
+              className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent-light transition-colors focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg cursor-pointer"
             >
               <Download size={16} /> Télécharger le CV
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-bg-second px-6 py-3 text-sm font-semibold text-text hover:border-accent/30 hover:text-accent transition-colors focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
+              className="inline-flex items-center gap-2 rounded-lg border border-border bg-bg-second px-6 py-3 text-sm font-semibold text-text hover:border-accent/30 hover:text-accent transition-colors focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
             >
               <Mail size={16} /> Me contacter
             </a>
@@ -51,7 +51,7 @@ export function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-bg-second text-text-muted hover:text-text hover:border-accent/30 transition-colors focus-visible:ring-2 focus-visible:ring-accent"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-bg-second text-text-muted hover:text-text hover:border-accent/30 transition-colors focus-visible:ring-2 focus-visible:ring-accent"
             >
               <Github size={18} />
             </a>
@@ -60,7 +60,7 @@ export function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-bg-second text-text-muted hover:text-text hover:border-accent/30 transition-colors focus-visible:ring-2 focus-visible:ring-accent"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-bg-second text-text-muted hover:text-text hover:border-accent/30 transition-colors focus-visible:ring-2 focus-visible:ring-accent"
             >
               <Linkedin size={18} />
             </a>
@@ -69,7 +69,7 @@ export function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="WhatsApp"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-bg-second text-text-muted hover:text-text hover:border-accent/30 transition-colors focus-visible:ring-2 focus-visible:ring-accent"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-bg-second text-text-muted hover:text-text hover:border-accent/30 transition-colors focus-visible:ring-2 focus-visible:ring-accent"
             >
               <MessageCircle size={18} />
             </a>
@@ -78,19 +78,23 @@ export function Hero() {
 
         <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-accent/20 blur-2xl " aria-hidden="true" />
+            {/* cercle en arrière-plan — halo visible derrière l'image */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[96%] w-[96%] rounded-full bg-accent/10 border border-accent/15" aria-hidden="true" />
+            <div className="absolute inset-0 rounded-full bg-accent/20 blur-2xl scale-105" aria-hidden="true" />
             <img
               src="/images/routs.webp"
               alt="Portrait de Rotsiniaina RAMANANTSOA"
               width={320}
               height={320}
               loading="eager"
-              className="h-[220px] w-[220px] sm:h-[280px] sm:w-[280px] lg:h-[320px] lg:w-[320px] rounded-full object-cover grayscale border-2 border-accent/40 bg-bg-second"
+              decoding="async"
+              fetchPriority="high"
+              className="relative z-10 h-[220px] w-[220px] sm:h-[280px] sm:w-[280px] lg:h-[320px] lg:w-[320px] rounded-full object-cover object-top shadow-xl border border-white/10 bg-bg-second grayscale will-change-transform"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";
               }}
             />
-            <div className="absolute -bottom-2 -right-2 rounded-full border border-border bg-bg-second px-3 py-1.5 font-mono text-xs text-text-muted shadow">
+            <div className="absolute -bottom-2 -right-2 z-20 rounded-lg border border-border bg-bg-second px-3 py-1.5 font-mono text-xs text-text-muted shadow">
               <span className="text-accent">●</span> Antananarivo, MG
             </div>
           </div>

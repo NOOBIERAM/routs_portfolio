@@ -4,7 +4,7 @@ import { projects } from "../../data/projects";
 import { useReveal } from "../../hooks/useReveal";
 
 const cornerBtn =
-  "group/btn pointer-events-auto inline-flex h-8 items-center justify-center overflow-hidden rounded-full border border-border bg-bg-second/95 px-2 text-text shadow-lg backdrop-blur-sm transition-colors hover:border-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
+  "group/btn pointer-events-auto inline-flex h-8 items-center justify-center overflow-hidden rounded-lg border border-border bg-bg-second/95 px-2 text-text shadow-lg backdrop-blur-sm transition-colors hover:border-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
 const cornerLabel =
   "mr-0 max-w-0 overflow-hidden whitespace-nowrap text-xs font-medium opacity-0 transition-all duration-300 group-hover/btn:mr-1.5 group-hover/btn:max-w-[64px] group-hover/btn:opacity-100 group-focus-visible/btn:mr-1.5 group-focus-visible/btn:max-w-[64px] group-focus-visible/btn:opacity-100";
 
@@ -39,7 +39,8 @@ export function Projects() {
                   width={600}
                   height={375}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover/img:scale-[1.03]"
+                  decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-500 ease-out will-change-transform group-hover/img:scale-[1.03]"
                   onError={(e) => {
                     const img = e.target as HTMLImageElement;
                     img.style.display = "none";

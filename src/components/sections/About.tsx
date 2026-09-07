@@ -41,7 +41,7 @@ export function About() {
 
   return (
     <section
-      id="parcours"
+      id="whoami"
       ref={ref as React.RefObject<HTMLElement>}
       className={`mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 transition-all duration-700 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"

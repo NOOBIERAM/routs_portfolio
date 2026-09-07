@@ -67,7 +67,7 @@ export function Modal({ open, onClose, title, children, fullscreen }: Props) {
           ref={closeBtnRef}
           onClick={onClose}
           aria-label="Fermer"
-          className={`absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded-full border transition-colors focus-visible:ring-2 focus-visible:ring-accent cursor-pointer z-10 ${fullscreen ? "bg-white/10 text-white hover:bg-white/20 border-white/20" : "bg-bg text-text-muted hover:text-text border-border"}`}
+          className={`absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded-lg border transition-colors focus-visible:ring-2 focus-visible:ring-accent cursor-pointer z-10 ${fullscreen ? "bg-white/10 text-white hover:bg-white/20 border-white/20" : "bg-bg text-text-muted hover:text-text border-border"}`}
         >
           <X size={16} />
         </button>

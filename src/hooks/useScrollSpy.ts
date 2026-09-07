@@ -4,7 +4,8 @@ export function useScrollSpy(ids: string[], offset = 100) {
   const [active, setActive] = useState<string>(ids[0] ?? "");
 
   useEffect(() => {
-    const handler = () => {
+    let ticking = false;
+    const update = () => {
       let current = ids[0] ?? "";
       for (const id of ids) {
         const el = document.getElementById(id);
@@ -13,8 +14,14 @@ export function useScrollSpy(ids: string[], offset = 100) {
         if (rect.top - offset <= 0) current = id;
       }
       setActive(current);
+      ticking = false;
     };
-    handler();
+    const handler = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    };
+    update();
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, [ids, offset]);

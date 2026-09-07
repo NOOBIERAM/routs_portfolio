@@ -3,19 +3,7 @@ import { SectionTitle } from "../ui/SectionTitle";
 import { profile } from "../../data/profile";
 import { useReveal } from "../../hooks/useReveal";
 
-const asciiContact = `
-      .--.
-     /    \\
-    |  -- |
-    | |  | |
-    |  -- |
-     \\    /
-      \`--\`
-   .--------.
-  /  CONTACT \\
- |   @mail   |
-  \\  ______/
-`;
+
 
 export function Contact() {
   const { ref, visible } = useReveal();
@@ -68,11 +56,7 @@ export function Contact() {
                 <span className="text-text-muted">--contact</span>
               </div>
 
-              <div className="grid gap-6 sm:grid-cols-[140px_1fr] items-start font-mono text-xs">
-                <pre className="text-accent leading-[1.2] text-[11px] sm:text-xs select-none overflow-x-auto whitespace-pre flex justify-center sm:justify-start">
-                  {asciiContact}
-                </pre>
-
+              <div className="font-mono text-xs">
                 <div className="min-w-0 leading-relaxed">
                   <p className="font-bold">
                     <span className="text-accent">routs</span>
@@ -161,6 +145,7 @@ export function Contact() {
                   width={180}
                   height={180}
                   loading="lazy"
+                  decoding="async"
                   className="h-42 w-42 object-contain rounded-sm"
                 />
               </div>

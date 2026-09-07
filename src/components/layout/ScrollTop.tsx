@@ -7,9 +7,18 @@ export function ScrollTop() {
   const [inContact, setInContact] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 400);
+    let ticking = false;
+    const update = () => {
+      setVisible(window.scrollY > 400);
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    };
+    update();
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -45,6 +54,7 @@ export function ScrollTop() {
             width={96}
             height={96}
             loading="lazy"
+            decoding="async"
             className="h-20 w-20 sm:h-24 sm:w-24 object-contain rounded-lg"
           />
         </div>
