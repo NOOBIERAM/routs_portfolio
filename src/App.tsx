@@ -4,10 +4,7 @@ import { Footer } from "./components/layout/Footer";
 import { ScrollTop } from "./components/layout/ScrollTop";
 import { Hero } from "./components/sections/Hero";
 import { CustomCursor } from "./components/ui/CustomCursor";
-
-const SplashScreen = lazy(() =>
-  import("./components/splash/SplashScreen").then((m) => ({ default: m.SplashScreen })),
-);
+import { SplashScreen } from "./components/splash/SplashScreen";
 const About = lazy(() => import("./components/sections/About").then((m) => ({ default: m.About })));
 const Experience = lazy(() =>
   import("./components/sections/Experience").then((m) => ({ default: m.Experience })),
@@ -27,9 +24,7 @@ export default function App() {
   return (
     <>
       <CustomCursor />
-      <Suspense fallback={null}>
-        {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
-      </Suspense>
+      {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
       <div aria-hidden={showSplash} className={showSplash ? "pointer-events-none select-none" : ""}>
         <Header />
         <main>

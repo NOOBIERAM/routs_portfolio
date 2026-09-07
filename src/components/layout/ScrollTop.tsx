@@ -44,7 +44,7 @@ export function ScrollTop() {
       style={{ marginBottom: "env(safe-area-inset-bottom)" }}
     >
       <div
-        className={`transition-all duration-300 ${showQR ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-2 scale-95 pointer-events-none"}`}
+        className={`hidden lg:block transition-all duration-300 ${showQR ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-2 scale-95 pointer-events-none"}`}
         aria-hidden={!showQR}
       >
         <div className="relative rounded-xl border border-border bg-white p-1.5 shadow-sm">

@@ -9,12 +9,14 @@ const NAV = [
   { id: "skills", label: "Skills" },
   { id: "projets", label: "Projets" },
   { id: "contact", label: "Contact" },
-];
+] as const;
+
+const NAV_IDS = NAV.map((n) => n.id);
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const active = useScrollSpy(NAV.map((n) => n.id), 120);
+  const active = useScrollSpy(NAV_IDS as unknown as string[], 120);
 
   useEffect(() => {
     let ticking = false;

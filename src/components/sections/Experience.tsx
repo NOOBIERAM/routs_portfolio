@@ -14,8 +14,8 @@ export function Experience() {
         }`}
     >
       <div className="grid gap-10 lg:gap-12 lg:grid-cols-[1.65fr_0.9fr] items-start">
-        {/* Colonne gauche : Expérience */}
-        <div>
+        {/* Colonne gauche : Expérience — après Éducation sur mobile */}
+        <div className="order-2 lg:order-1">
           <SectionTitle>EXPÉRIENCES</SectionTitle>
           <div className="mt-10 relative pl-6 border-l border-border space-y-9">
             {experiences.map((exp) => {
@@ -55,8 +55,8 @@ export function Experience() {
           </div>
         </div>
 
-        {/* Colonne droite : Éducation */}
-        <div className="lg:sticky lg:top-24">
+        {/* Colonne droite : Éducation — avant Expérience sur mobile */}
+        <div className="lg:sticky lg:top-24 order-1 lg:order-2">
           <SectionTitle>ÉDUCATION</SectionTitle>
           <div className="mt-10 relative pl-6 border-l border-border space-y-8 ">
             {educationData.map((ed) => (

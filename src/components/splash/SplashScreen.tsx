@@ -38,17 +38,6 @@ export function SplashScreen({ onFinish }: Props) {
         ${exiting ? "opacity-0 scale-[0.98] pointer-events-none" : "opacity-100 scale-100"}`}
       style={{ minHeight: "100dvh", paddingTop: "env(safe-area-inset-top)", paddingBottom: "env(safe-area-inset-bottom)" }}
     >
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          skip();
-        }}
-        className="absolute top-4 right-4 sm:top-6 sm:right-6 text-xs font-mono text-text-muted hover:text-text border border-border rounded-lg px-3 py-1.5 bg-bg-second transition-colors focus-visible:ring-2 focus-visible:ring-accent cursor-pointer"
-        aria-label="Passer l'animation"
-      >
-        Skip <span className="hidden sm:inline">— Échap</span>
-      </button>
-
       <div
         className={`w-full flex flex-col gap-5 sm:gap-7 items-center transition-opacity duration-500 ${exiting ? "opacity-0" : "opacity-100"}`}
         onClick={(e) => e.stopPropagation()}
